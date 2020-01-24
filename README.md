@@ -9,7 +9,7 @@ Our product will provide a streamlined experience for finding parking at the mai
 
 3. The product is an interactive map -- [We're still searching for a good name...]
 
-4. That leads to less stress and better lecture attendance rates
+4. That leads to less stress and higher lecture attendance rates
 
 5. Unlike the tradition parking saturation tracker (linked above)
 
