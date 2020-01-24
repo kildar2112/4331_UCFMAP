@@ -32,10 +32,10 @@ ___
 * Burndown Chart
 * Velocity Chart
 * Design Documents
-** System Architecture
-** Class Diagrams
-** Sequence Diagrams
-** etc.
+..* System Architecture
+..* Class Diagrams
+..* Sequence Diagrams
+..* etc.
 * Source Code
 * Automated Tests
 * Product Demonstration
