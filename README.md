@@ -1,9 +1,7 @@
 # Product Vision
-
+___
 
 Our product will provide a streamlined experience for finding parking at the main UCF campus. The map shall provide a quick visual reference for determining parking garage saturation, as opposed to UCF's own [tracker](https://parking.ucf.edu/garage-availability/). Our hopes is that this product will lessen the burden of trying to find parking space at the main UCF campus. The main benefactors of this product will be students and faculty.
-
-___________________________________________________________________
 
 1. For students and faculty at UCF.
 
@@ -18,6 +16,7 @@ ___________________________________________________________________
 6. Our product offers an interactive interface which gives more detailed information than the competitors
 
 ## Team Members
+___
 * Nick Plympton
 * Alexander Neal
 * Brandon Clark
