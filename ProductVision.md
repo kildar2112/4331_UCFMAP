@@ -1,4 +1,4 @@
-#COP4331- Product Vision
+# COP4331- Product Vision
 
 
 Our product will provide a streamlined experience for finding parking at the main UCF campus. The map shall provide a quick visual reference for determining parking garage saturation, as opposed to UCF's own [tracker](https://parking.ucf.edu/garage-availability/). Our hopes is that this product will lessen the burden of trying to find parking space at the main UCF campus. The main benefactors of this product will be students and faculty.
