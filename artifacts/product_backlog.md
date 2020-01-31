@@ -2,7 +2,7 @@
 
 | ID | User Story | Effort | Priority | Validation Criteria | Status |
 |----|------------|--------|----------|---------------------|--------|
-| 000 | As a student or faculty, I want to see parking availability so I know which garage to park in. | - | - | When I do <action>, <result> happens. |  |
+| 000 | As a student or faculty, I want to see parking availability so I know which garage to park in. | - | - | When I do -action-, -result- happens. |  |
 | 001 | As a student or faculty, I want to see the walk time to my class so that I know when to leave. | - | - | - |  |
 | 002 | As a student or faculty, I want to know the bike time to class so that I know when to leave. | - | - | - |  |
 | 003 | As a student or faculty, I want to see a garage's peak hours so I know the best time to park. | - | - | - |  |
