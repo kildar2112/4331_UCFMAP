@@ -25,7 +25,7 @@ Team Members
 
 # Sprint 1 (Currently Placeholder)
 ___
-* [Product Backlog](https://https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/product_backlog.md)
+* [Product Backlog](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/product_backlog.md)
 * Sprint Backlog
 * Requirements
 * [Trello Board](https://trello.com/b/DQ7zz3dr "Trello Board")
