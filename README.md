@@ -28,7 +28,7 @@ ___
 * Product Backlog
 * Sprint Backlog
 * Requirements
-* Trello Board
+* [Trello Board](https://trello.com/b/DQ7zz3dr "Trello Board")
 * Burndown Chart
 * Velocity Chart
 * Design Documents
