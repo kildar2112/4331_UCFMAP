@@ -29,7 +29,7 @@ ___
 * Sprint Backlog
 * Requirements
 * [Trello Board](https://trello.com/b/DQ7zz3dr "Trello Board")
-* Burndown Chart
+* [Burndown Chart](https://docs.google.com/spreadsheets/d/18ZNrewHhYaIdlC0otEgjJGLAa8rV4aXmvFUzKAAMz2E/edit?usp=sharing "Burndown Chart")
 * Velocity Chart
 * Design Documents
   * System Architecture
