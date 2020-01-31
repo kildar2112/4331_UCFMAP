@@ -12,7 +12,7 @@ Team Members
 * Pablo Trivino
 
 
-# Sprint 1 (Currently Placeholder)
+# Sprint 1
 ___
 * [Product Backlog](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/product_backlog.md)
 * Sprint Backlog
