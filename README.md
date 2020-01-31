@@ -15,7 +15,7 @@ Team Members
 # Sprint 1
 ___
 * [Product Backlog](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/product_backlog.md)
-* Sprint Backlog
+* [Sprint Backlog](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/sprint1_backlog.md)
 * Requirements
 * [Trello Board](https://trello.com/b/DQ7zz3dr "Trello Board")
 * [Burndown Chart](https://docs.google.com/spreadsheets/d/18ZNrewHhYaIdlC0otEgjJGLAa8rV4aXmvFUzKAAMz2E/edit?usp=sharing "Burndown Chart")
