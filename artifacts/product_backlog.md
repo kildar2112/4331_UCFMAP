@@ -2,7 +2,7 @@
 
 | ID | User Story | Effort | Priority | Validation Criteria | Status |
 |----|------------|--------|----------|---------------------|--------|
-| 000 | As a student or faculty, I want to see parking availability so I know which garage to park in. | - | - | When I open the webpage, I should see the parking saturation of all garages without clicking them. | OPEN |
+| 000 | As a student or faculty, I want to see parking availability so I know which garage to park in. | 4 | 1 | When I open the webpage, I should see the parking saturation of all garages without clicking them. | OPEN |
 | 001 | As a student or faculty, I want to see the walk time to my class so that I know when to leave. | - | - | When I select a location/garage and corresponding building, I should see the time to walk between them. | OPEN |
 | 002 | As a student or faculty, I want to know the bike time to class so that I know when to leave. | - | - | When I select a location/garage and corresponding building, I should see the time to bike between them. | OPEN |
 | 003 | As a student or faculty, I want to see a garage's peak hours so I know the best time to park. | - | - | When I select a garage, I should see a saturation vs. time of day graph. | OPEN |
