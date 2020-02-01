@@ -12,5 +12,5 @@
 | 007 | As a student or faculty, I want to know where I parked so that I don't forget. | 55 | 5 | When I open the webpage, the garage I previously parked in will be differentiated from the other garages. | OPEN |
 | 008 | As a student or faculty, I want to know how many spots are left in a garage so I can determine if I can find a spot. | 5 | 2 | When I select a garage, available spaces are displayed. | OPEN |
 | 009 | As a student or faculty, I want to know which garages I can park in with my specific parking pass so that I don't get a parking ticket. | 3 | 3 | When I select a garage, permit types are displayed. | OPEN |
-| 010 | As a student or faculty, I want to access to the map through my browser so that I can see it from any device. | 3 | 1 | When I type the URL into my browser, I should be brought to the webpage. | OPEN |
+| 010 | As someone who parks at UCF, I want to be able to load the website in a web browser so I can check parking from any device. | 3 | 1 | When I type the URL into my browser, I should be brought to the webpage. | OPEN |
 
