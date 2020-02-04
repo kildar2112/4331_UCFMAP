@@ -11,9 +11,8 @@ Team Members
 * Brandon Clark
 * Pablo Trivino
 
-
-# Sprint 1
 ___
+# Sprint 1
 * [Product Backlog](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/product_backlog.md)
 * [Sprint Backlog](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/sprint1_backlog.md)
 * [Requirements](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/requirements.md)
@@ -28,9 +27,8 @@ ___
 * [Source Code](https://github.com/kildar2112/4331_UCFMAP/blob/master/src/source_code.txt)
 * Automated Tests
 * [Product Demonstration](http://my.ucfparkingmap.wtf/)
-
-# Sprint 2
 ___
+# Sprint 2
 * [Product Backlog](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/product_backlog.md)
 * [Sprint Backlog](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/sprint2_backlog.md)
 * [Requirements](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/requirements.md)
