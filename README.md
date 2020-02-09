@@ -40,6 +40,6 @@ ___
   * Class Diagrams
   * Sequence Diagrams
   * etc.
-* [Source Code](https://github.com/kildar2112/4331_UCFMAP/blob/master/src/source_code.txt)
+* [Source Code](https://github.com/kildar2112/4331_UCFMAP/blob/master/src/sprint2_source_code.txt)
 * Automated Tests
 * Product Demonstration
