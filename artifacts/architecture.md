@@ -29,6 +29,7 @@ Business Rules
 User Interface Design
 ===
 [User Interface Diagram](https://docs.google.com/drawings/d/16DPH29ViC9o1byNa-bV2rYDFJ4SD3fNrLsuwYscEsiA/edit?usp=sharing)
+
 [User Interface Description](https://docs.google.com/document/d/1NbHeXcBzvRX_gwZu9qL7QONij4zAqkXUbm0EJtyyrIs/edit?usp=sharing)
 
 Resource Management
