@@ -22,6 +22,7 @@ This diagram shows the links between the filter that is put over the UCF map and
 
 Data Design
 ===
+Data will be stored in a database using Firebase, if needed.
 
 Business Rules
 ===
@@ -31,6 +32,8 @@ User Interface Design
 [User Interface Diagram](https://docs.google.com/drawings/d/16DPH29ViC9o1byNa-bV2rYDFJ4SD3fNrLsuwYscEsiA/edit?usp=sharing)
 
 [User Interface Description](https://docs.google.com/spreadsheets/d/176kv5p055fJC5ESXw7EtPdeijBrr9F2iLoWR1RY9rsE/edit?usp=sharing)
+
+[Related User Stories](https://docs.google.com/spreadsheets/d/176kv5p055fJC5ESXw7EtPdeijBrr9F2iLoWR1RY9rsE/edit?usp=sharing)
 
 Resource Management
 ===
