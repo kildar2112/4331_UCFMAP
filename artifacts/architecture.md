@@ -18,7 +18,7 @@ This diagram shows the links between the filter that is put over the UCF map and
 
 [Class Descriptions](https://docs.google.com/document/d/1QSI1F7FovfD75h76nOl4Rfxur2yqmRN8nwEtyDUsk1o/edit?usp=sharing)
 
-[Related User Stories](https://docs.google.com/spreadsheets/d/1M_ln6ihm26gYYpeJPvi5UznOYSBsz13smrJnPS2PgDU/edit?usp=sharing)
+[Related User Stories](https://docs.google.com/spreadsheets/d/1k7q2BV7jlDt9QNjrzUYfFlQOx1ptZoENrk4T_eiTI3E/edit?usp=sharing)
 
 Data Design
 ===
