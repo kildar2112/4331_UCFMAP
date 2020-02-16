@@ -1,6 +1,8 @@
 Product Vision
 ===
 
+# Where2Park
+
 Trying to find parking at UCF during peak class hours can take an unreasonable amount of time. Our product will provide a streamlined experience for students and faculty in trying to find parking at the main UCF campus. Our product will be a map, which shall provide a quick visual reference for determining parking garage location and saturation, as opposed to UCF's own, [limited tracker](https://parking.ucf.edu/garage-availability/). Our hopes is that this product will lessen the burden of trying to find parking space at the main UCF campus. The main benefactors of this product will be students and faculty.
 
 

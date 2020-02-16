@@ -52,14 +52,14 @@ Related User Stories:
 Data Design
 ===
 Data may or may not need to be stored, depending if we choose to implement a login, although this might negatively impact how easy the app is to use. If we do decide to include the option to
-create accounts, information regarding the user's name, preferred place to park, and where the user parked will be stored in a databse using Firebase.
+create accounts, information regarding the user's name, preferred place to park, and where the user parked will be stored in a database such as Firebase.
 
 Business Rules
 ===
 
 User Interface Design
 ===
-[User Interface Diagram](https://docs.google.com/drawings/d/16DPH29ViC9o1byNa-bV2rYDFJ4SD3fNrLsuwYscEsiA/edit?usp=sharing)
+![User Interface Diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/parkkmap.jpg?raw=true)
 
 User Interface Description:
 
