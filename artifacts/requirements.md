@@ -15,3 +15,4 @@
 | 010 | 003 | System must reject incoming input that is verifiably invalid (ex: data out of predefined  bounds, wrong type, etc.) | A system pause shall be conducted and requirement #008 activated when invalid data is passed to system. | 21 | 2 | OPEN |
 | 011 | 003 | [Internal] System should update saturation graph via adjustable time interval | System test verifies successful update flag | 5 | 4 | OPEN |
 | 012 | 003 | System must store incoming data long term for analysis/computations | Data is stored in such a manner that it can be retrieved by system functions and read by developers | 21 | 1 | WORKING |
+| 013 | 009 | Garages must store the permit types for which it has parking spaces available | Given a driver viewing the homepage, when they select a garage, then the permit types permitted in the garage are displayed. | 3 | 3 | WORKING |
