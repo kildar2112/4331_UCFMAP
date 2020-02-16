@@ -1,9 +1,11 @@
 Program Organization
 ===
-[Architectural Diagram](https://docs.google.com/drawings/d/1c-6kSGmjtPCjN_mEDOcLGAIN6KLTDg-4bDjwdkh7MEM/edit?usp=sharing)
 
-Architectural Description:
+![System_context_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/System_context_diagram.jpeg?raw=true )
 In the first level of the diagram, the user, highlighted in green, accesses the website to view parking availability and travel times from the garage the user desires to park in to his or her class. The website, represented by a blue square, indicating it is software being developed, uses two existing software systems: Google Maps and UCF Parking Services. The user is able to view parking availability on the website when that information is retrieved from UCF Parking Services. Additionally, the user is able to view travel times on the website, which uses Google Maps to provide that information.
+
+
+![Figure 1-2](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/Container_diagram.jpeg?raw=true )
 The second level of the diagram, the user, highlighted in green, visits http://my.ucfparkingmap.wtf/ to view park space and travel times. The software, which is represented by the large, square outline, is represented at this level by two parts. Firstly, the Web Application portion, which is made in HTML, is where the user views parking availability and travel times. This portion also retrieves information from UCF Parking Services. The Web Application makes calls to the Google Maps API, which provides travel times and a route to class.
 
 
