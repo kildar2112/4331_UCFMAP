@@ -51,8 +51,7 @@ Related User Stories:
 
 Data Design
 ===
-Data may or may not need to be stored, depending if we choose to implement a login, although this might negatively impact how easy the app is to use. If we do decide to include the option to
-create accounts, information regarding the user's name, preferred place to park, and where the user parked will be stored in a database such as Firebase.
+It is our current intent to use Heroku as our application's host and to store permanent data logs using Amazon's S3 services. Due to the nature of our host's ephemeral filesystem, we'll need to frequently backup our program's data logs elsewhere. We intend on [reading from a bucket](https://www.ashishpaliwal.com/blog/2015/02/amazon-s3-reading-file-content-from-s3-bucket-in-java/) on program startup and saving logs to it at the end of a data cycle. We intend to setup the data logging in such a way that the most up to date and valid information is available for viewing on the website. In order to accomplish this we must develop the system in such a way that if invalid data is recorded, a halt will be placed on the corrupted data being displayed on the website.
 
 Business Rules
 ===
@@ -108,12 +107,15 @@ Resource Management
 
 Security
 ===
+For our own security, we have decided to buy our hosting platform as to avoid making ourselves vulnerable to malicious activity. At the current time we do not see any reason
 
 Performance
 ===
+We have not foreseen any performance issues in our design mockups yet. We'll keep you updated.
 
 Scalability
 ===
+Thanks to the nature of Heroku and the fact that minimal data is stored on the back end, we should be able to scale up the app to handle traffic exceeding the total population of UCF students and staff.
 
 Interoperability
 ===
@@ -124,11 +126,16 @@ Internationalization/Localization
 Input/Output
 ===
 
-Error Processing
-===
+The system will be receiving input from UCF Parking Services and will be reading and writing to Amazon's S3.
 
 Fault Tolerance
 ===
+Since we're using 3rd party data, we must insure that we have a very narrow fault tolerance in respects to the data we allow our system to digest. If any changes to the source of our data is made, we have to be able to verify that the data we are receiving is still valid. If a change has been made that breaks the system, our error processing needs to be able to handle it and notify us, the development team.
+
+Error Processing
+===
+If the system receives invalid data from a 3rd party, it cannot commit them to a valid log file. It must be processed and stored for debugging. If at some point the incoming data stream changes is such a way, the system must go into a safety/lockdown state that prevents valid logs from corruption and invalid data from being displayed to the user.
+
 
 Architectural Feasibility
 ===
@@ -138,6 +145,7 @@ Overengineering
 
 Build-vs-Buy Decisions
 ===
+Rather than build a server to host our program, we decided to outsource virtually all of our program's hardware requirements. We're using Heroku to run our application and will be using Amazon's S3 service to store our permanent files.
 
 Reuse
 ===
