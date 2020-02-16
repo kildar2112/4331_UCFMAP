@@ -26,11 +26,26 @@ Garage:
 Filter:
  Controls garage colors and routes and can be toggled on or off. Everything is private in this class. Each garage has a color that represents how full it is. Green means relatively empty (0% - 33%], yellow means mediumly full (33% - 66%], red means very full (66-100%), and black means completely full (100%).
 
-Route: 
+Route:
 The class that works with the Filter class and that finds the route from a start point to an end point. Its two public methods simply turn it on or off. Its private methods set and change the start and end points, and also find a route between those two points.
 
+Related User Stories:
 
-[Related User Stories](https://docs.google.com/spreadsheets/d/1k7q2BV7jlDt9QNjrzUYfFlQOx1ptZoENrk4T_eiTI3E/edit?usp=sharing)
+| ID | User Story | Related Class | Explanation |
+|----|------------|--------|----------|
+| 000 | As someone who parks at UCF, I want to see parking availability so I know which garage to park in. | Garage | Garage has a field that says how many spots are full and a method that calculates the percentage of spots taken.|
+| 001 | As someone who parks at UCF, I want to see the walk time to my class so that I know when to leave. | Route, Building | Building  has a field that describes its location. Route then uses this information to give a walk time estimate.|
+| 002 | As someone who parks at UCF, I want to know the bike time to class so that I know when to leave. | Route, Building | Building has a field that describes its location. Route then uses this information to give a bike time.|
+| 003 | As someone who parks at UCF, I want to see a garage's peak hours so I know the best time to park. | Garage | Each garage will keep track of its peak hours. |
+| 004 | As someone who parks at UCF, I want to know a route to my classroom so I can reduce my travel time. | Route | The Route class gives finds a route between to locations. |
+| 005 | As someone who parks at UCF, I want to see a map of campus that shows me the buildings and garages so I can navigate the campus. | Filter, Building | Filter and Building contribute to what you see on the map. Filter shows how full a garage is by color-coding it and displays the route. Building highlights classrooms on the map which is part of the HTML code. |
+| 006 | As someone who parks at UCF, I want to be able to tell a garage's fullness from a color label so that it's more clear from a glance. | Filter | The Filter class is what displays the colors that dictate how full a garage is.|
+| 007 | As someone who parks at UCF, I want to know where I parked so that I don't forget. | Garage | The Garage class can store information about where the user parked.|
+| 008 | As someone who parks at UCF, I want to know how many spots are left in a garage so I can determine if I can find a spot. | Garage | The Garage class keeps track of how many spots are open and how many spots are occupied, as well as the percentage of spots taken.|
+| 009 | As someone who parks at UCF, I want to know which garages I can park in with my specific parking pass so that I don't get a parking ticket. | Garage | The Garage class keeps track of which parking passes are required to park in it. |
+| 010 | As someone who parks at UCF, I want to be able to load the website in a web browser so I can check parking from any device. | - | This functionality is dependent on the website and HTML code.|
+| 011 | As someone who uses the parking map, I want to be able to select a building or parking garage so that I can see more information and potential interactions | Building, Garage | The Building and Garage classes provide information about themselves, such as how full it is if it is a garage, and where it is if it is a building.|
+| 012 | As someone who uses the parking map, I want to be able to contact the developer so that improvements can be made to the application (or to express my deepest gratitude) | - | This feature will be controlled by the website.|
 
 Data Design
 ===
@@ -68,7 +83,23 @@ The Map:
 	The map will have clickable icons for each building and garage. The user will be able to click buildings and receive information about them, such as their fullness if it is a garage, or location and distance if it is a classroom. The garages on the map will also be color-coded to represent their fullness, so that the user will know how full a garage is before they click on it.
 
 
-[Related User Stories](https://docs.google.com/spreadsheets/d/176kv5p055fJC5ESXw7EtPdeijBrr9F2iLoWR1RY9rsE/edit?usp=sharing)
+Related User Stories:
+
+| ID | User Story | Related UI Component | Explanation |
+|----|------------|--------|----------|
+| 000 | As someone who parks at UCF, I want to see parking availability so I know which garage to park in. | Garage Availability | This section lists all the garages, along with how many spots are available, unavailable, and what percent full the garage is.|
+| 001 | As someone who parks at UCF, I want to see the walk time to my class so that I know when to leave. | Walk to Class | The Walk to Class option gives an estimate, and a route if it is requested, of how long it will take to walk to a chosen location from where you are.|
+| 002 | As someone who parks at UCF, I want to know the bike time to class so that I know when to leave. | Bike to Class | The Bike to Class option gives an estimate, and a route if it is requested, of how long it will take to bike to a chosen location from where you are.|
+| 003 | As someone who parks at UCF, I want to see a garage's peak hours so I know the best time to park. | Map, Garage Availability | By selecting a garage on the map or in the garage list, the user will be able to see that garage's peak hours. |
+| 004 | As someone who parks at UCF, I want to know a route to my classroom so I can reduce my travel time. | Show Route, Go to Google Maps| If Show Route is selected, pressing the Go to Google Maps option will show you a route to the selected location on Google Maps. |
+| 005 | As someone who parks at UCF, I want to see a map of campus that shows me the buildings and garages so I can navigate the campus. | Map | The Map part of the website displays a map of the entire campus, including buildings and garages. |
+| 006 | As someone who parks at UCF, I want to be able to tell a garage's fullness from a color label so that it's more clear from a glance. | Map| The Map will display all the garages, as well as color them to show how much space is left, with green being relatively empty, yellow being mediumly filled, and red being almost full. A black garage is completely full.|
+| 007 | As someone who parks at UCF, I want to know where I parked so that I don't forget. | Map | The garage where the user parked will be highlighted on the Map.|
+| 008 | As someone who parks at UCF, I want to know how many spots are left in a garage so I can determine if I can find a spot. | Garage Availability, Map | The Map will display color-coded garages to show which garages are full and which are empty. The Garage Availability section will display a list of how full the garages are.|
+| 009 | As someone who parks at UCF, I want to know which garages I can park in with my specific parking pass so that I don't get a parking ticket. | Filter By Parking Permit | The Filter By Parking Permit dropdown menu will allow the user to select a parking permit to filter out the garages that do not accept that permit on the Map and Garage Availability section. |
+| 010 | As someone who parks at UCF, I want to be able to load the website in a web browser so I can check parking from any device. | - | This functionality is dependent on the website and HTML code.|
+| 011 | As someone who uses the parking map, I want to be able to select a building or parking garage so that I can see more information and potential interactions | Map | The Map will be interactive and display information about the selected building or garage.|
+| 012 | As someone who uses the parking map, I want to be able to contact the developer so that improvements can be made to the application (or to express my deepest gratitude) | Contact Developer | By clicking this button, the user can contact the developer.|
 
 Resource Management
 ===
