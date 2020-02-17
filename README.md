@@ -45,4 +45,4 @@ ___
 * [Design Documents](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/architecture.md)
 * [Source Code](https://github.com/kildar2112/4331_UCFMAP/blob/master/src/sprint3_source_code.txt)
 * Automated Tests
-* [Product Demonstration](https://www.youtube.com/watch?v=P1uiUvLMaz8&feature)
+* [Product Demonstration](https://www.youtube.com/watch?v=jLBAXZMwJzg)
