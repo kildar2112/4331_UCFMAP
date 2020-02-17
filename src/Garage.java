@@ -2,14 +2,15 @@ import java.io.*;
 import java.util.*;
 import java.awt.*;
 
+// This class represents a garage
 public class Garage {
-	public String name;
-	public final int totalSpots;
-	public int filledSpots;
+	private String name;
+	private final int totalSpots;
+	private int filledSpots;
 	public int percentage;
 	private int levels;
-	public Color color;
-	public ArrayList<String> acceptedPermits;
+	private Color color;
+	private ArrayList<String> acceptedPermits;
 
 	public Garage(String garageName, int totalSpots) {
 		this.name = garageName;
@@ -42,5 +43,13 @@ public class Garage {
 		else if (percentage == 100)
 			color = Color.black;
 
+	}
+
+	public Color getColor() {
+		return this.color;
+	}
+
+	public int getPercentage() {
+		return this.percentage;
 	}
 }

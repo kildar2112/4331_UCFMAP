@@ -87,7 +87,7 @@ public class Tests {
 		garage.calcPercentage();
 
 		int expectedOutput = (int)((double)filledSpots / totalSpots * 100);
-		int actualOutput = garage.percentage;
+		int actualOutput = garage.getPercentage();
 
 		if (actualOutput != expectedOutput) {
 			System.err.println("test_calcPercentage error.\n inputs: totalSpots- " +
@@ -135,9 +135,9 @@ public class Tests {
 		else if (percentage == 100)
 			expectedColor = Color.black;
 
-		if (!garage.color.equals(expectedColor))
+		if (!garage.getColor().equals(expectedColor))
 			System.err.println("test_updateColor error\n inputs : percentage- " + percentage +
-			  									" expected result: Color- " + expectedColor + " actual result : Color- " + garage.color);
+			  									" expected result: Color- " + expectedColor + " actual result : Color- " + garage.getColor());
 	}
 
 	private static void RunTests() {

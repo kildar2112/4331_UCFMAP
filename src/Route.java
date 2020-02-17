@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.*;
 import java.awt.*;
 
+// This class calculates routes between two points
 public class Route {
 	public Point start;
 	public Point end;
