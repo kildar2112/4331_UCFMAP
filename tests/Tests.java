@@ -4,7 +4,7 @@ import java.awt.*;
 
 
 public class Tests {
-	// Tests to make sure the calcPercentage method is running correctly
+	// Tests to make sure the calcPercentage method in Garage class works
 	private static void test_calcPercentage() {
 		int totalSpots = 1852; // 1852 corresponds to Garage C, the garage with the most spots
 
@@ -21,8 +21,10 @@ public class Tests {
 		System.out.println("Passed calcPercentage");
 	}
 
+	// Test to make sure changeStart in the Route class works
 	private static void test_changeStart() {
-		// A new test point between positive 1 billion and negative 1 billion
+		// Test a point between positive 1 billion and negative 1 billion
+
 		for (int testNumber = 1; testNumber <= 10000; testNumber++) {
 			Point testPoint = new Point(0 ,0);
 			testPoint.x = (int)(Math.random() * ((int)2e9 + 1) - (int)(1e9));
@@ -41,8 +43,10 @@ public class Tests {
 		System.out.println("Passed test_changeStart");
 	}
 
+	// Test to make sure changeEnd in the Route class works
 	private static void test_changeEnd() {
-		// A new test point between positive 1 billion and negative 1 billion
+		// Test a point between positive 1 billion and negative 1 billion
+
 		for (int testNumber = 1; testNumber <= 10000; testNumber++) {
 			Point testPoint = new Point(0 ,0);
 			testPoint.x = (int)(Math.random() * ((int)2e9 + 1) - (int)(1e9));
@@ -61,7 +65,9 @@ public class Tests {
 		System.out.println("Passed test_changeEnd");
 	}
 
+	// Test to make sure updateColor in Garage class works
 	private static void test_updateColor() {
+		// Test a random percentage updates the colors correctly
 		for (int testNumber = 1; testNumber <= 10000; testNumber++) {
 			int testPercent = (int)(Math.random() * 101); // Random percentage from 0-100%
 			test_updateColor(testPercent);
@@ -91,7 +97,6 @@ public class Tests {
 		}
 	}
 
-	// Tests to make sure the changeStart method is running correctly
 	private static void test_changeStart(Point newStartPoint) {
 		Route route = new Route();
 		route.changeStart(newStartPoint);
@@ -104,7 +109,6 @@ public class Tests {
 		}
 	}
 
-	// Tests to make sure the changeEnd method is running correctly
 	private static void test_changeEnd(Point newEndPoint) {
 		Route route = new Route();
 		route.changeEnd(newEndPoint);
@@ -137,10 +141,12 @@ public class Tests {
 	}
 
 	private static void RunTests() {
+		// These methods can be found in the Garage class
 		test_calcPercentage();
+		test_updateColor();
+		// These methods can be found in the Route class
 		test_changeStart();
 		test_changeEnd();
-		test_updateColor();
 	}
 
 	public static void main(String [] args) {

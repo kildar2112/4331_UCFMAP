@@ -19,14 +19,18 @@ public class Garage {
 		this.acceptedPermits = new ArrayList<String>();
 	}
 
+	// Updates the number of occupied spots
 	public void updateSpots(int filledSpots) {
 		this.filledSpots = filledSpots;
 	}
 
+	// Calculates the percentage of spots taken
 	public void calcPercentage() {
 		this.percentage = (int)((double) this.filledSpots / this.totalSpots * 100);
 	}
 
+	// This updates the color label displaying garage fullness depending on the percentage field.
+	// 0 - 33 is green, 34 - 66 is yellow, 67 - 99 is red, and 100 is black
 	public void updateColor() {
 
 		if (percentage <= 33)
