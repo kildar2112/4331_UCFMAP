@@ -5,17 +5,24 @@ import java.awt.*;
 public class Route {
 	public Point start;
 	public Point end;
-	public List<Point> intermediates;
+	public ArrayList<Point> intermediates;
 
-	private void changeStart(Point p) {
-
+	public Route() {
+		this.start = new Point(0, 0);
+		this.end = new Point(0, 0);
 	}
 
-	private void changeEnd(Point p) {
-
+	public void changeStart(Point newStartPoint) {
+		start.x = newStartPoint.x;
+		start.y = newStartPoint.y;
 	}
 
-	private void findRoute(Point start, Point end) {
+	public void changeEnd(Point newEndPoint) {
+		end.x = newEndPoint.x;
+		end.y = newEndPoint.y;
+	}
+
+	public void findRoute(Point start, Point end) {
 
 	}
 
@@ -24,6 +31,6 @@ public class Route {
 	}
 
 	public void turnOff() {
-		
+
 	}
 }

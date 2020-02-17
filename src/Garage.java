@@ -1,33 +1,42 @@
 import java.io.*;
 import java.util.*;
+import java.awt.*;
 
 public class Garage {
 	public String name;
-	public int totalSpots;
+	public final int totalSpots;
 	public int filledSpots;
 	public int percentage;
 	private int levels;
-	public Array<Integer> color;
-	public List<char> acceptedPermits;
+	public Color color;
+	public ArrayList<String> acceptedPermits;
 
-	public void Garage() {
-		name = "GarageName"
-		totalSpots = 0;
-		filledSpots = 0;
-		percentage = 0;
-		levels = 0;
-		color = new Array<Integer>();
-		acceptedPermits = new List<char>();
-	}
-	private void updateSpots() {
+	public Garage(String garageName, int totalSpots) {
+		this.name = garageName;
+		this.totalSpots = totalSpots;
 
+		this.color = Color.green;
+		this.acceptedPermits = new ArrayList<String>();
 	}
 
-	private void calcPercentage(int totalSpots, int filledSpots) {
-
+	public void updateSpots(int filledSpots) {
+		this.filledSpots = filledSpots;
 	}
 
-	private void updateColor() {
+	public void calcPercentage() {
+		this.percentage = (int)((double) this.filledSpots / this.totalSpots * 100);
+	}
+
+	public void updateColor() {
+
+		if (percentage <= 33)
+			color = Color.green;
+		else if (percentage <= 66)
+			color = Color.yellow;
+		else if (percentage <= 99)
+			color = Color.red;
+		else if (percentage == 100)
+			color = Color.black;
 
 	}
 }
