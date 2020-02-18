@@ -44,5 +44,5 @@ ___
 * [Velocity Chart](https://docs.google.com/spreadsheets/d/1cew6mcgZfgurgXaZ3WlLkIoqFvAG7rNAzxE7I6ZCIE8/edit?usp=sharing)
 * [Design Documents](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/architecture.md)
 * [Source Code](https://github.com/kildar2112/4331_UCFMAP/blob/master/src/sprint3_source_code.txt)
-* Automated Tests
+* [Automated Tests](https://github.com/kildar2112/4331_UCFMAP/tree/master/tests)
 * [Product Demonstration](https://www.youtube.com/watch?v=jLBAXZMwJzg)
