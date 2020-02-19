@@ -109,6 +109,7 @@ Related User Stories:
 
 Resource Management
 ===
+At this time we do not have any concerns with resource management. Should we encounter issues regarding resource management during development, we will update this section.
 
 Security
 ===
@@ -120,18 +121,19 @@ We have not foreseen any performance issues in our design mockups yet. We'll kee
 
 Scalability
 ===
-Thanks to the nature of Heroku and the fact that minimal data is stored on the back end, we should be able to scale up the app to handle traffic exceeding the total population of UCF students and staff.
+Thanks to the nature of Heroku, S3, and the fact that minimal data is stored on the back end, we should be able to scale up the app to handle traffic exceeding the total population of UCF students and staff.
 
 Interoperability
 ===
+While we don't have any plans for the information we produce to be utilized by another party, we will be operating our program based on the information received by [UCF Parking's Garage Availability page](https://parking.ucf.edu/garage-availability/).
 
 Internationalization/Localization
 ===
+Given our project is local to the UCF Orlando campus, there are no plans for supporting anything beyond local usage. Our website's primary supported language will be English, but we do have tentative plans for including an additional language option, Spanish.
 
 Input/Output
 ===
-
-The system will be receiving input from UCF Parking Services and will be reading and writing to Amazon's S3.
+The system will be receiving input from UCF Parking Services and will be reading and writing to Amazon's S3. At this time we have no intention of storing any data input by a user.
 
 Fault Tolerance
 ===
@@ -144,16 +146,20 @@ If the system receives invalid data from a 3rd party, it cannot commit them to a
 
 Architectural Feasibility
 ===
+As we near a completed architecture, we will evaluate our architecture as a whole and update this section.
 
 Overengineering
 ===
+We currently do not have plans to overengineer our product as a whole. The intent for the popular hours calculator is to build it in such a way that it can be functional independent of input source... In other words, it should functional outside of the scope of our project with minimal modifications.
 
 Build-vs-Buy Decisions
 ===
-Rather than build a server to host our program, we decided to outsource virtually all of our program's hardware requirements. We're using Heroku to run our application and will be using Amazon's S3 service to store our permanent files.
+Rather than build a server to host our program, we decided to outsource virtually all of our program's hardware requirements. We're using Heroku to run our application and will be using Amazon's S3 service to store our permanent data/files.
 
 Reuse
 ===
+We do not currently have any plans for reusing any part of our project elsewhere. As we develop it, we will do our best to compartmentalize our code to make parts reusable in other projects.
 
 Change Strategy
 ===
+Assuming we embrace the agile mindset, any changes we make should be embraced with minimal friction.
