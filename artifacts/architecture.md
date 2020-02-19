@@ -113,7 +113,7 @@ At this time we do not have any concerns with resource management. Should we enc
 
 Security
 ===
-For our own security, we have decided to buy our hosting platform as to avoid making ourselves vulnerable to malicious activity. At the current time we do not see any reason
+For our own security, we have decided to buy our hosting platform as to avoid making ourselves vulnerable to malicious activity.
 
 Performance
 ===
