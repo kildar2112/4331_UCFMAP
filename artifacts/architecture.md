@@ -29,8 +29,6 @@ depending on the information gathered from UCF Parking Services. That informatio
 the processed data to the Database Updater class, which sends that information to the database.
 
 
-Related Classes:
-
 Related User Stories:
 
 | ID | User Story | Related Class | Explanation |
