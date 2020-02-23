@@ -1,15 +1,18 @@
 Program Organization
 ===
-Level 1:
+Level 1: System Context
 ![System_context_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/C4%20Diagrams/System%20Context.jpeg)
 The user checks the website, called where2park, and sees an interactive map. Here the user can view garage availability, peak hours, and which permits are accepted in which garages. Furthermore, the
-website will make API calls to Google Maps to provide walk times and to display a route to get to a desired building. The web scraper portion grabs information from UCF Parking Services and sends it to
-an Amazon S3 Dynamo Database. That information is used to calculate peak hours in a garage and is later accessed by the web app.
+website will make API calls to Google Maps to provide walk times and to display a route to get to a desired building. The website also retrives information about peak hours from an Amazon S3 DynamoDB
+databse.
 
 
-
-![Container_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/architecture/Container_diagram.jpeg?raw=true)
-The second level of the diagram, the user, highlighted in green, visits http://my.ucfparkingmap.wtf/ to view park space and travel times. The software, which is represented by the large, square outline, is represented at this level by two parts. Firstly, the Web Application portion, which is made in HTML, is where the user views parking availability and travel times. This portion also retrieves information from UCF Parking Services. The Web Application makes calls to the Google Maps API, which provides travel times and a route to class.
+Level 2: Container
+![Container_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/C4%20Diagrams/Container.jpeg)
+The software is made up of two major parts: the web scraper and the single-page web application. The web scraper is a Java program that grabs information from UCF Parking Services. This information
+is validated and then sent to the Dynamo database, where it will be used to gather information about peak hours. The single-page application provides all the functionality, and is where the user can
+view garage fullness, valid parking permits, and walk times, as well as the other features of the website. The website retrieves the information that the Java program sent to the database to display peak hours,
+and makes API calls to Google Maps to display a route and estimate walk times.
 
 
 [Relation to User Stories](https://docs.google.com/spreadsheets/d/1M_ln6ihm26gYYpeJPvi5UznOYSBsz13smrJnPS2PgDU/edit?usp=sharing) based
