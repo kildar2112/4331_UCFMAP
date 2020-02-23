@@ -29,8 +29,27 @@ depending on the information gathered from UCF Parking Services. That informatio
 the processed data to the Database Updater class, which sends that information to the database.
 
 
-[Relation to User Stories](https://docs.google.com/spreadsheets/d/1M_ln6ihm26gYYpeJPvi5UznOYSBsz13smrJnPS2PgDU/edit?usp=sharing) based
-on the Level 2 of the C4 Diagram above.
+Related Classes:
+
+Related User Stories:
+
+| ID | User Story | Related Class | Explanation |
+|----|------------|--------|----------|
+| 000 | As someone who parks at UCF, I want to see parking availability so I know which garage to park in. | Map, Garage, Garage List, Website scraper | Garages appear color-coded on the map. The garage list also displays the fullness of a garage. The website scraper gets that information from UCF Parking Services |
+| 001 | As someone who parks at UCF, I want to see the walk time to my class so that I know when to leave. | Pop-Up Window | The Pop-Up Window makes API calls to Google Maps, showing the walk time. |
+| 002 | As someone who parks at UCF, I want to know the bike time to class so that I know when to leave. | Pop-up window | The Pop-Up Window makes API calls to Google Maps, showing the bike time. |
+| 003 | As someone who parks at UCF, I want to see a garage's peak hours so I know the best time to park. | Pop-Up Window, Database | The pop-up window shows peak hours. The peak hours are stored in the database |
+| 004 | As someone who parks at UCF, I want to know a route to my classroom so I can reduce my travel time. | Pop-Up Window | The pop-up window displays an embedded link to Google Maps |
+| 005 | As someone who parks at UCF, I want to see a map of campus that shows me the buildings and garages so I can navigate the campus. | Map | The map shows all the relevant garages and buildings |
+| 006 | As someone who parks at UCF, I want to be able to tell a garage's fullness from a color label so that it's more clear from a glance. | Map, Garage | The Garages displayed on the map will be color-coded to show fullness. |
+| 007 | As someone who parks at UCF, I want to know where I parked so that I don't forget. | Pop-up, Map | This info might be displayed on the pop-up or the map |
+| 008 | As someone who parks at UCF, I want to know how many spots are left in a garage so I can determine if I can find a spot. | Garage List, Map, Garage, Pop-up Window | The Garage List shows a list of which garages are closest to a selected building and their fullness. Garages on the map will be color-coded to represent fullness. The Pop-Up Window details what percent full a garage is and how many spots are available.|
+| 009 | As someone who parks at UCF, I want to know which garages I can park in with my specific parking pass so that I don't get a parking ticket. | Pop-Up Window | The Pop-Up Window displays all the accepted parking permits for a garage. |
+| 010 | As someone who parks at UCF, I want to be able to load the website in a web browser so I can check parking from any device. | - | This functionality is dependent on the website and HTML code. |
+| 011 | As someone who uses the parking map, I want to be able to select a building or parking garage so that I can see more information and potential interactions. | Map, Pop-Up Window, Garage | The map shows all the interactive garages, which can be clicked to open a pop-up window. This window shows all the relevant information |
+| 012 | As someone who uses the parking map, I want to be able to contact the developer so that improvements can be made to the application (or to express my deepest gratitude). | Contact Developer | The contact developer option allows the user to send an email to the developers. |
+
+
 
 Major Classes
 ===
