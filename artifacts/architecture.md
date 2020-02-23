@@ -1,8 +1,11 @@
 Program Organization
 ===
+Level 1:
+![System_context_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/C4%20Diagrams/System%20Context.jpeg)
+The user checks the website, called where2park, and sees an interactive map. Here the user can view garage availability, peak hours, and which permits are accepted in which garages. Furthermore, the
+website will make API calls to Google Maps to provide walk times and to display a route to get to a desired building. The web scraper portion grabs information from UCF Parking Services and sends it to
+an Amazon S3 Dynamo Database. That information is used to calculate peak hours in a garage and is later accessed by the web app.
 
-![System_context_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/architecture/System_context_diagram.jpeg?raw=true )
-In the first level of the diagram, the user, highlighted in green, accesses the website to view parking availability and travel times from the garage the user desires to park in to his or her class. The website, represented by a blue square, indicating it is software being developed, uses two existing software systems: Google Maps and UCF Parking Services. The user is able to view parking availability on the website when that information is retrieved from UCF Parking Services. Additionally, the user is able to view travel times on the website, which uses Google Maps to provide that information.
 
 
 ![Container_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/architecture/Container_diagram.jpeg?raw=true)
