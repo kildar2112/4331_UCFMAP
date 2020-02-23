@@ -14,7 +14,7 @@ on the Level 2 of the C4 Diagram above.
 
 Major Classes
 ===
-![Filter and Building class diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/UML/cd_buiding_processor.jpg?raw=true)
+![Filter and Building class diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/UML/cd_building_processor.jpg?raw=true)
 This diagram shows the links between the filter that is put over the UCF map and the buildings, garages, and route that users will be able to see.
 
 CLASS DESCRIPTIONS
