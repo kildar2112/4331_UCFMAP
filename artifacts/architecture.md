@@ -15,6 +15,14 @@ view garage fullness, valid parking permits, and walk times, as well as the othe
 and makes API calls to Google Maps to display a route and estimate walk times.
 
 
+![Container_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/C4%20Diagrams/Component.jpeg)
+The single-page application has several components. Firstly, the contact developer component allows a user to send an email to us and is not dependent on any other part of the program. The Map component
+displays all the color-coded garages, which will be interactive. Upon clicking a garage, a pop-up window that displays information about the garage will appear. This window makes API calls to Google Maps
+to display a route and to estimate walk times. This window will also retrieve peak hours from the Dynamo database. The Select Classroom Component will be a dropdown menu with all the classroom buildings.
+Upon clicking one of these classrooms, a list of the nearest garages will appear, along with their fullness. This also provides an endpoint for Google Maps to find a route, since the buildings will
+not be interactive on the map.
+
+
 [Relation to User Stories](https://docs.google.com/spreadsheets/d/1M_ln6ihm26gYYpeJPvi5UznOYSBsz13smrJnPS2PgDU/edit?usp=sharing) based
 on the Level 2 of the C4 Diagram above.
 
