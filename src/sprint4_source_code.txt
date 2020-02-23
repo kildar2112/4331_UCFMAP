@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<title>UCF Map</title>
+
+<head>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body style="background-color:lightblue;">
+    <div id="SplashScreen">
+        <img src="https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/misc/0001712_0.png?raw=true" class="center" onclick="ClearScreen()" />
+    </div>
+    <div style="display:none;" id="All">
+        <div>
+            <h1> UCF Parking Map Coming Soon</h1>
+        </div>
+        <div style="float: left;">
+            <img src="https://cdn.discordapp.com/attachments/666313075695288368/673266055589920788/UCFMAP.PNG" alt="UCF Map" usemap="#parkMap">
+            <map name="parkMap">
+                <area class="garageA" onclick="alertA()" shape="rect" coords="150,500,200,450" href="#">
+                <area class="garageB" onclick="alertB()" shape="rect" coords="360,550,410,580" href="#">
+                <area class="garageC" onclick="alertC()" shape="rect" coords="515,330,560,380" href="#">
+                <area class="garageD" onclick="alertD()" shape="rect" coords="465,255,515,300" href="#">
+                <area class="garageH" onclick="alertH()" shape="rect" coords="330,250,370,285" href="#">
+                <area class="garageI" onclick="alertI()" shape="rect" coords="180,400,235,440" href="#">
+            </map>
+        </div>
+        <div style="border: 3px solid black; overflow: hidden; margin: 15px auto; max-width: 560px;">
+            <iframe scrolling="no" src="https://parking.ucf.edu/garage-availability/" style="border: 0px none; margin-left: -0px; height: 550px; margin-top: -250px; width: 560px;">
+            </iframe>
+        </div>
+        <select id="PermitSelect" style="margin-left: 100px;">
+            <option value="Filter">Filter by Parking Permit</option>
+            <option value="D">Student D Permit</option>
+            <option value="C">Employee C Permit</option>
+            <option value="B">Employee B Permit</option>
+            <option value="R">Resident R Permit</option>
+            <option value="RL">Resident RL Permit</option>
+            <option value="KP">Resident KP Permit</option>
+        </select>
+        <select id="Building Select" style="margin-left: 100px;">
+            <option value="Select">Select Classroom Building</option>
+            <option value="CB1">Classroom Building 1</option>
+            <option value="CB2">Classroom Building 2</option>
+        </select>
+        <br>
+        <br>
+        <form action="/action_page.php">
+            <input type="checkbox" name="Walk" value="Walk" style="margin-left: 100px;">
+            <label for="WalktoClass"> Walk to Class</label>
+            <input type="checkbox" name="Route" value="Route" style="margin-left: 160px;">
+            <label for="ShowRoute"> Show Route</label>
+            <br>
+            <input type="checkbox" name="Bike" value="Bike" style="margin-left: 100px;">
+            <label for="BiketoClass"> Bike to Class</label>
+            <br>
+            <br>
+            <button style="margin-left: 225px;" onclick="window.location.href = 'http://google.com';">Go To Google Maps</button>
+        </form>
+    </div>
+    <script>
+        function alertA() {
+            alert("Garage A allows parking with D Permits");
+        }
+    </script>
+    <script>
+        function alertB() {
+            alert("Garage B allows parking with D Permits");
+        }
+    </script>
+    <script>
+        function alertC() {
+            alert("Garage C allows parking with D Permits");
+        }
+    </script>
+    <script>
+        function alertD() {
+            alert("Garage D allows parking with D Permits");
+        }
+    </script>
+    <script>
+        function alertH() {
+            alert("Garage H allows parking with D Permits");
+        }
+    </script>
+    <script>
+        function alertI() {
+            alert("Garage I allows parking with D Permits");
+        }
+    </script>
+
+    <script>
+        function ClearScreen() {
+            document.getElementById("SplashScreen").style.display = "none";
+            document.getElementById("All").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
