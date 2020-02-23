@@ -22,6 +22,12 @@ to display a route and to estimate walk times. This window will also retrieve pe
 Upon clicking one of these classrooms, a list of the nearest garages will appear, along with their fullness. This also provides an endpoint for Google Maps to find a route, since the buildings will
 not be interactive on the map.
 
+Level 4: Class
+![Class_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/C4%20Diagrams/Class%20Diagram%20C4.jpeg)
+This diagram shows the classes we will be using for the software. The website scraper class returns an array of Garage objects, which contain how full they are. The scraper class will update each garage
+depending on the information gathered from UCF Parking Services. That information is then sent to the processor class, which validates the information and formats it. Then, the processor class sends
+the processed data to the Database Updater class, which sends that information to the database.
+
 
 [Relation to User Stories](https://docs.google.com/spreadsheets/d/1M_ln6ihm26gYYpeJPvi5UznOYSBsz13smrJnPS2PgDU/edit?usp=sharing) based
 on the Level 2 of the C4 Diagram above.
