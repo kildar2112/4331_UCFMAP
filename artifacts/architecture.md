@@ -14,8 +14,8 @@ is validated and then sent to the Dynamo database, where it will be used to gath
 view garage fullness, valid parking permits, and walk times, as well as the other features of the website. The website retrieves the information that the Java program sent to the database to display peak hours,
 and makes API calls to Google Maps to display a route and estimate walk times.
 
-
-![Container_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/C4%20Diagrams/Component.jpeg)
+Level 3: Component
+![Component_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/C4%20Diagrams/Component.jpeg)
 The single-page application has several components. Firstly, the contact developer component allows a user to send an email to us and is not dependent on any other part of the program. The Map component
 displays all the color-coded garages, which will be interactive. Upon clicking a garage, a pop-up window that displays information about the garage will appear. This window makes API calls to Google Maps
 to display a route and to estimate walk times. This window will also retrieve peak hours from the Dynamo database. The Select Classroom Component will be a dropdown menu with all the classroom buildings.
