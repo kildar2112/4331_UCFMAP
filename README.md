@@ -55,6 +55,6 @@ ___
 * [Burndown Chart](https://docs.google.com/spreadsheets/d/18ZNrewHhYaIdlC0otEgjJGLAa8rV4aXmvFUzKAAMz2E/#gid=2121564038)
 * [Velocity Chart](https://docs.google.com/spreadsheets/d/1cew6mcgZfgurgXaZ3WlLkIoqFvAG7rNAzxE7I6ZCIE8/edit?usp=sharing)
 * [Design Documents](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/architecture.md)
-* Source Code
+* [Source Code](https://github.com/kildar2112/4331_UCFMAP/blob/master/src/sprint4_source_code.txt)
 * [Automated Tests](https://github.com/kildar2112/4331_UCFMAP/tree/master/tests)
-* Product Demonstration
+* [Product Demonstration](https://www.youtube.com/watch?v=EmE7-YFm87A)
