@@ -1,0 +1,19 @@
+--tag KEY--
+ID Format		Description
+
+lbl_Garage_X		text labels over garages
+obj_Garage_X		garage fill area (to be filled with saturation color and clickable)
+
+
+
+
+
+
+
+
+--Color mapping---
+Descriptor			RGBA
+Student/Visitor			009116ff
+Faculty				a50004ff
+Staff				0091d9ff
+Residents			a55804ff
