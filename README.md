@@ -51,6 +51,7 @@ ___
 * [Product Backlog](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/product_backlog.md)
 * [Sprint Backlog](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/sprint4_backlog.md)
 * [Requirements](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/requirements.md)
+* [Responsibilities](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/responsibilities.md)
 * [Trello Board](https://trello.com/b/DQ7zz3dr "Trello Board")
 * [Burndown Chart](https://docs.google.com/spreadsheets/d/18ZNrewHhYaIdlC0otEgjJGLAa8rV4aXmvFUzKAAMz2E/#gid=2121564038)
 * [Velocity Chart](https://docs.google.com/spreadsheets/d/1cew6mcgZfgurgXaZ3WlLkIoqFvAG7rNAzxE7I6ZCIE8/edit?usp=sharing)
