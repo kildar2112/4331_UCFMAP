@@ -15,6 +15,7 @@ on the Level 2 of the C4 Diagram above.
 Major Classes
 ===
 ![Filter and Building class diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/UML/cd_buiding_processor.jpg?raw=true)
+
 This diagram shows the links between the buildings, garages, and the processor that is used to process and check the data coming from UCF Parking Services.
 
 CLASS DESCRIPTIONS
