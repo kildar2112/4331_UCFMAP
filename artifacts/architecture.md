@@ -14,7 +14,7 @@ on the Level 2 of the C4 Diagram above.
 
 Major Classes
 ===
-![Filter and Building class diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/UML/cd_filter&building.JPG?raw=true)
+![Filter and Building class diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/UML/cd_buiding_processor.JPG?raw=true)
 This diagram shows the links between the filter that is put over the UCF map and the buildings, garages, and route that users will be able to see.
 
 CLASS DESCRIPTIONS
@@ -25,11 +25,8 @@ Building:
 Garage:
 	A type of building that records how full the garage is, which garage it is, and what permits are needed to park in it. It inherits from the Building class and contains a few private methods, which update the fullness of the garage, calculate the percentage of spots available, and change the color that represents how full a garage is (e.g. a red garage is full). In addition, its fields record what its current color is, how many spots it has, how many are available, and what permits are accepted at that garage.
 
-Filter:
- Controls garage colors and routes and can be toggled on or off. Everything is private in this class. Each garage has a color that represents how full it is. Green means relatively empty (0% - 50%], yellow indicates somewhat full (50% - 80%], red means very full (80-95%), and black means nearly or completely full [95-100%].
-
-Route:
-The class that works with the Filter class and that finds the route from a start point to an end point. Its two public methods simply turn it on or off. Its private methods set and change the start and end points, and also find a route between those two points.
+Processor:
+	The class that processes all of the data taken from the UCF Parking Services. It contains arrays that store all of the current data for the garages. This class will also send the data to S3 which is used for storing the data so we can calculate peak hours for the garages. We can also validate the data coming in to make sure that we aren't pulling in garbage data if UCF Parking Services is down for any period of time.
 
 Related User Stories:
 
