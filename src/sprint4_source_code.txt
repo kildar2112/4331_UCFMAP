@@ -15,11 +15,12 @@
 
 <body style="background-color:lightblue;">
     <div id="SplashScreen">
+     	 <h1> Click image to agree and continue...</h1>
         <img src="https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/misc/0001712_0.png?raw=true" class="center" onclick="ClearScreen()" />
     </div>
     <div style="display:none;" id="All">
         <div>
-            <h1> UCF Parking Map Coming Soon</h1>
+            <h1> Updated Parking Map (Interactive SVG) Coming Soon!</h1>
         </div>
         <div style="float: left;">
             <img src="https://cdn.discordapp.com/attachments/666313075695288368/673266055589920788/UCFMAP.PNG" alt="UCF Map" usemap="#parkMap">
