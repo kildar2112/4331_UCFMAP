@@ -15,6 +15,7 @@
 
 <body style="background-color:lightblue;">
     <div id="SplashScreen">
+     	 <h1> Click image to agree and continue...</h1>
         <img src="https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/misc/0001712_0.png?raw=true" class="center" onclick="ClearScreen()" />
     </div>
     <div style="display:none;" id="All">
