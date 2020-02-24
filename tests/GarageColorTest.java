@@ -1,5 +1,6 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
+import java.awt.*;
 
 public class GarageColorTest {
   private static void test_updateColor(int percentage) {
