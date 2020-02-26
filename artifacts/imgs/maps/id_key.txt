@@ -17,3 +17,9 @@ Student/Visitor			009116ff
 Faculty				a50004ff
 Staff				0091d9ff
 Residents			a55804ff
+
+
+
+
+img url:
+https://raw.githubusercontent.com/kildar2112/4331_UCFMAP/43805340e20cccab59118e0fd22935fdd8cc1871/artifacts/imgs/maps/Raw_OSM_map.svg

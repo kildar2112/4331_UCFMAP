@@ -59,3 +59,16 @@ ___
 * [Source Code](https://github.com/kildar2112/4331_UCFMAP/blob/master/src/sprint4_source_code.txt)
 * [Automated Tests](https://github.com/kildar2112/4331_UCFMAP/tree/master/tests)
 * [Product Demonstration](https://www.youtube.com/watch?v=EmE7-YFm87A)
+___
+# Sprint 5
+* [Product Backlog](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/product_backlog.md)
+* [Sprint Backlog](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/sprint6_backlog.md)
+* [Requirements](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/requirements.md)
+* [Responsibilities](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/responsibilities.md)
+* [Trello Board](https://trello.com/b/DQ7zz3dr "Trello Board")
+* [Burndown Chart](https://docs.google.com/spreadsheets/d/18ZNrewHhYaIdlC0otEgjJGLAa8rV4aXmvFUzKAAMz2E/#gid=38318436)
+* [Velocity Chart](https://docs.google.com/spreadsheets/d/1cew6mcgZfgurgXaZ3WlLkIoqFvAG7rNAzxE7I6ZCIE8/edit?usp=sharing)
+* [Design Documents](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/architecture.md)
+* Source Code
+* [Automated Tests](https://github.com/kildar2112/4331_UCFMAP/tree/master/tests)
+* Product Demonstration
