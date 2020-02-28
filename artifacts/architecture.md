@@ -1,32 +1,21 @@
 Program Organization
 ===
 Level 1: System Context
-![System_context_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/C4%20Diagrams/System%20Context.jpeg)
-The user checks the website, called where2park, and sees an interactive map. Here the user can view garage availability, peak hours, and which permits are accepted in which garages. Furthermore, the
-website will make API calls to Google Maps to provide walk times and to display a route to get to a desired building. The website also retrives information about peak hours from an Amazon S3 DynamoDB
-databse.
+![System_context_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/C4%20Diagrams/System%20Context.jpeg?raw=true)
+The user checks the website, called where2park, and sees an interactive map. Here the user can view garage availability, peak hours, and which permits are accepted in which garages. Furthermore, the website will make API calls to Google Maps to provide walk times and to display a route to get to a desired building. The website will also retrieve information about peak hours via calls to our DynamoDB database.
 
 
 Level 2: Container
-![Container_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/C4%20Diagrams/Container.jpeg)
-The software is made up of two major parts: the web scraper and the single-page web application. The web scraper is a Java program that grabs information from UCF Parking Services. This information
-is validated and then sent to the Dynamo database, where it will be used to gather information about peak hours. The single-page application provides all the functionality, and is where the user can
-view garage fullness, valid parking permits, and walk times, as well as the other features of the website. The website retrieves the information that the Java program sent to the database to display peak hours,
-and makes API calls to Google Maps to display a route and estimate walk times.
+![Container_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/C4%20Diagrams/Container.jpeg?raw=true)
+The software is made up of two major parts: the web scraper and the single-page web application. The web scraper will be a function hosted on Amazon's Lambda, which will pull from the [inline frame used on UCF's website](http://secure.parking.ucf.edu/GarageCount/iframe.aspx). This information is validated and then sent to the Dynamo database, where it will be used for updating the data displayed our map and for calculations regarding popular hours. The single-page application provides an interface for all of the functionality the user will need. It is here the user can view garage saturation, popular/peak hours, valid parking permits, and walk times, etc. The website will also allow the user to invoke API calls to Google Maps to display a route and estimate walk times.
 
 Level 3: Component
-![Component_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/C4%20Diagrams/Component.jpeg)
-The single-page application has several components. Firstly, the contact developer component allows a user to send an email to us and is not dependent on any other part of the program. The Map component
-displays all the color-coded garages, which will be interactive. Upon clicking a garage, a pop-up window that displays information about the garage will appear. This window makes API calls to Google Maps
-to display a route and to estimate walk times. This window will also retrieve peak hours from the Dynamo database. The Select Classroom Component will be a dropdown menu with all the classroom buildings.
-Upon clicking one of these classrooms, a list of the nearest garages will appear, along with their fullness. This also provides an endpoint for Google Maps to find a route, since the buildings will
-not be interactive on the map.
+![Component_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/C4%20Diagrams/Component.jpeg?raw=true)
+The single-page application has several components. Firstly, the contact developer component allows a user to send an email to us and is independent from any other part of the program. The Map component displays all the color-coded garages, which will be interactive. Upon clicking a garage, a pop-up window that displays information about the garage will appear. When invoked by the user, this window makes API calls to Google Maps to display a route and to estimate walk times. This window will also retrieve peak hours from the Dynamo database. The Select Classroom Component will be a dropdown menu with all the classroom buildings. Upon clicking one of these classrooms, a list of the nearest garages will appear, along with their current saturation level. The items in the dropdown will be encoded with coordinate information for Google Maps to find a route, since the buildings will not be interactive on the map.
 
 Level 4: Class
-![Class_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/C4%20Diagrams/Class%20Diagram%20C4.jpeg)
-This diagram shows the classes we will be using for the software. The website scraper class returns an array of Garage objects, which contain how full they are. The scraper class will update each garage
-depending on the information gathered from UCF Parking Services. That information is then sent to the processor class, which validates the information and formats it. Then, the processor class sends
-the processed data to the Database Updater class, which sends that information to the database.
+![Class_diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/C4%20Diagrams/Class%20Diagram%20C4.jpeg?raw=true)
+This diagram shows the classes we will be using for the software. The website scraper class returns an array of Garage objects, which contain how full they are. That information is then sent to the processor class, which validates the information and formats it. Then, the processor class sends the processed data to the Database Updater class, which sends that information to the database. The processed data is then pulled from DynamoDB and pushed as the most up to date parking data on our website.
 
 
 Related User Stories:
@@ -58,13 +47,13 @@ This diagram shows the links between the buildings, garages, and the processor t
 CLASS DESCRIPTIONS
 
 Building:
-	The class that represents a UCF Building, which contains its location and the    option to enable or disable visibility on the map. It contains two public methods that turn the visibility on or off. Its location is also kept track of by a Point.
+	The class that represents a UCF Building, which contains its location and the option to enable or disable visibility on the map. It contains two public methods that turn the visibility on or off. Its location is also kept track of by a Point.
 
 Garage:
-	A type of building that records how full the garage is, which garage it is, and what permits are needed to park in it. It inherits from the Building class and contains a few private methods, which update the fullness of the garage, calculate the percentage of spots available, and change the color that represents how full a garage is (e.g. a red garage is full). In addition, its fields record what its current color is, how many spots it has, how many are available, and what permits are accepted at that garage.
+	A type of building that records how full the garage is, which garage it is, and what permits are needed to park in it. It inherits from the Building class and contains a few private methods, which update the saturation levels of the garage, calculate the percentage of spots available, and changes the color that represents how full a garage is (e.g. a red garage is nearly full).
 
 Processor:
-	The class that processes all of the data taken from the UCF Parking Services. It contains arrays that store all of the current data for the garages. This class will also send the data to S3 which is used for storing the data so we can calculate peak hours for the garages. We can also validate the data coming in to make sure that we aren't pulling in garbage data if UCF Parking Services is down for any period of time.
+	The class that processes all of the data taken from the UCF Parking Services. It contains arrays that store all of the current data for the garages. This class will also send the data to DynamoDB which is used for storing the data so we can calculate peak hours for the garages. We can also validate the data coming in to make sure that we aren't pulling in garbage data if UCF Parking Services is down for any period of time.
 
 Related User Stories:
 
@@ -86,7 +75,7 @@ Related User Stories:
 
 Data Design
 ===
-It is our current intent to use Heroku as our application's host and to store permanent data logs using Amazon's S3 services. Due to the nature of our host's ephemeral filesystem, we'll need to frequently backup our program's data logs elsewhere. We intend on [reading from a bucket](https://www.ashishpaliwal.com/blog/2015/02/amazon-s3-reading-file-content-from-s3-bucket-in-java/) on program startup and saving logs to it at the end of a data cycle. We intend to setup the data logging in such a way that the most up to date and valid information is available for viewing on the website. In order to accomplish this we must develop the system in such a way that if invalid data is recorded, a halt will be placed on the corrupted data being displayed on the website.
+It is our current intent to use AWS's Lambda as our application's host and to store permanent data logs using Amazon's DynamoDB service. We intend to setup the data logging in such a way that the most up to date and valid information is available for viewing on the website. In order to accomplish this we must develop the system in such a way that if invalid data is recorded, a halt will be placed on the corrupted data and prevent it from being displayed on the website.
 
 Business Rules
 ===
@@ -96,7 +85,7 @@ User Interface Design
 ===
 ![User Interface Diagram](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/garages/popup.jpg?raw=true)
 The Map:
-	The map will have clickable icons for each building and garage. The user will be able to click buildings and receive information about them, such as their fullness if it is a garage, or location and distance if it is a classroom. The garages on the map will also be color-coded to represent their fullness, so that the user will know how full a garage is before they click on it.
+	The map will have clickable icons for each garage. The user will be able to click garages and receive detailed information about them such as their overall saturation, accepted permit types, popular hours, etc. The garages on the map will also be color-coded to represent their fullness, so that the user will know roughly how full a garage is simply by glancing at the map as a whole.
 
 
 ---
@@ -157,7 +146,7 @@ We have not foreseen any performance issues in our design mockups yet. We'll kee
 
 Scalability
 ===
-Thanks to the nature of Heroku, S3, and the fact that minimal data is stored on the back end, we should be able to scale up the app to handle traffic exceeding the total population of UCF students and staff.
+Thanks to the nature of Lambda, DynamoDB, and the fact that minimal data is stored on the back end, we should be able to scale up the app to handle traffic exceeding the total population of UCF students and staff.
 
 Interoperability
 ===
@@ -169,7 +158,7 @@ Given our project is local to the UCF Orlando campus, there are no plans for sup
 
 Input/Output
 ===
-The system will be receiving input from UCF Parking Services and will be reading and writing to Amazon's S3. At this time we have no intention of storing any data input by a user.
+The system will be receiving input from UCF Parking Services and will be reading and writing to Amazon's DynamoDB. At this time we have no intention of storing any data input by a user.
 
 Fault Tolerance
 ===
@@ -190,7 +179,7 @@ We currently do not have plans to overengineer our product as a whole. The inten
 
 Build-vs-Buy Decisions
 ===
-Rather than build a server to host our program, we decided to outsource virtually all of our program's hardware requirements. We're using Heroku to run our application and will be using Amazon's S3 service to store our permanent data/files.
+Rather than build a server to host our program, we decided to outsource virtually all of our program's hardware requirements. We're using Lambda to run our application and will be using Amazon's DynamoDB service to store our permanent data/files.
 
 Reuse
 ===
