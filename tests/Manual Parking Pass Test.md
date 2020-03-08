@@ -1,6 +1,6 @@
 # Manual Parking Pass Test
 
-1) Go to this [link](my.ucfparkingmap.wtf) or open a new tab and type
+1) Go to this [link](https://s3.amazonaws.com/www.ucfparkingmap.com/Index.html) or open a new tab and type
 my.ucfparkingmap.wtf into the search bar.
 
 2) When the screen loads, click anywhere on the screen to get past the Don't Text and Drive screen.
