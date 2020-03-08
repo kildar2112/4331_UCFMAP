@@ -85,3 +85,4 @@ ___
 * [Source Code](https://github.com/kildar2112/4331_UCFMAP/blob/master/src/Sprint_6)
 * [Tests - Manual & Automated](https://github.com/kildar2112/4331_UCFMAP/tree/master/tests)
 * Product Demonstration
+	* [View the website live!](https://s3.amazonaws.com/www.ucfparkingmap.com/Index.html)
