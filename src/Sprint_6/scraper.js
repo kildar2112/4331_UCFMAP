@@ -14,14 +14,52 @@ writeStream.write(`Garage,Spaces Available,Percent Full \n`)
 
 // A garage has a name, empty spots, capacity, and percent full
 class Garage {
-  constructor(name, emptySpots, capacity) {
-    this.name = name;
-    this.emptySpots = emptySpots
-    this.capacity = capacity
-    this.percentFull = Math.round((capacity - emptySpots) / capacity * 100)
+  constructor(name, emptySpots,capacity) {
+		this.name = name;
+		this.capacity = capacity;
+		this.filledSpots = capacity-emptySpots;
+		this.percentage = Math.round(this.filledSpots/capacity);
+		this.acceptedPermits = ['B','C','D'];
+    if(this.percentage <= 33) {
+			this.color = 'green';
+		}
+		else if(this.percentage <= 66) {
+			this.color = 'yellow';
+		}
+		else if(this.percentage <= 99) {
+			this.color = 'red';
+		}
+		else if(this.percentage == 100) {
+			this.color = 'black';
+		}
+	}
 
-    if (this.percentFull < 0)
-      this.percentFull = 0
+	calcPercent() {
+		this.percentage = Math.round(this.filledSpots/this.capacity);
+		return this.percentage;
+	}
+
+	updateColor() {
+		var currentPercent = this.percentage;
+		if(currentPercent <= 33) {
+			this.color = 'green';
+		}
+		else if(currentPercent <= 66) {
+			this.color = 'yellow';
+		}
+		else if(currentPercent <= 99) {
+			this.color = 'red';
+		}
+		else if(currentPercent == 100) {
+			this.color = 'black';
+		}
+
+		return this.color;
+	}
+
+  updateSpots() {
+    scrape();
+    this.updateColor();
   }
 }
 
