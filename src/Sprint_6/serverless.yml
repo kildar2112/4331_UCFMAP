@@ -1,0 +1,11 @@
+service: parking-scraper
+
+provider:
+  name: aws
+  runtime: python3.6
+
+package:
+  artifact: package.zip
+functions:
+  parking_scrape:
+    handler: handler.scrape
