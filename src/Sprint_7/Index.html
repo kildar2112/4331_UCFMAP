@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+   <title>UCF Map</title>
+   <head>
+      <style>
+         .center {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         width: 50%;
+         }
+       
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 70vh;
+            max-height: 100%;
+            margin: auto;
+        }
+      </style>
+   </head>
+   <body style="background-color:lightblue;">
+      <div id="SplashScreen">
+         <h1> Click image to agree and continue...</h1>
+         <img class = "center" src="https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/misc/0001712_0.png?raw=true" onclick="ClearScreen()" />
+      </div>
+      <div style="display:none; max-width: 1100px;" id="All">
+         <div>
+            <h1> SVG Parking Map (Interactivity Coming Soon!)</h1>
+            <a href = "mailto:where2park.devs@gmail.com?subject=Feedback">
+            Click here to send feedback!
+            </a>
+         </div>
+         <div style="float: left;">
+            <img class= "center-fit" src="https://s3.amazonaws.com/www.ucfparkingmap.com/UCFmap.svg" alt="UCF Map">
+         </div>
+         <div style="float: left; border: 3px solid black; overflow: hidden; margin: 15px auto; width: 560px;">
+            <iframe scrolling="no" src="https://parking.ucf.edu/garage-availability/" style="border: 0px none; margin-left: -0px; height: 550px; margin-top: -250px; width: 560px;">
+            </iframe>
+         </div>
+         <br>
+         <br>
+         <br>
+         <select id="PermitSelect" style="position:relative; left:35px;">
+            <option value="Filter">Filter by Parking Permit</option>
+            <option value="D">Student D Permit</option>
+            <option value="C">Employee C Permit</option>
+            <option value="B">Employee B Permit</option>
+            <option value="R">Resident R Permit</option>
+            <option value="RL">Resident RL Permit</option>
+            <option value="KP">Resident KP Permit</option>
+         </select>
+         <select id="Building Select" style="position:relative; left: 70px;">
+            <option value="Select">Select Classroom Building</option>
+            <option value="CB1">Classroom Building 1</option>
+            <option value="CB2">Classroom Building 2</option>
+         </select>
+         <br>
+         <br>
+            <input type="checkbox" name="Walk" value="Walk" style="margin-left: 35px; height: 20px; width: 20px;">
+            <label for="WalktoClass"> Walk to Class</label>
+            <input type="checkbox" name="Route" value="Route" style="margin-left: 70px; height: 20px; width: 20px;">
+            <label for="ShowRoute"> Show Route</label>
+            <br>
+            <br>
+            <button style="margin-left: 175px;" onclick="window.location.href = 'http://google.com';">Go To Google Maps</button>
+      </div>
+      
+     
+      <script>
+         function ClearScreen() {
+             document.getElementById("SplashScreen").style.display = "none";
+             document.getElementById("All").style.display = "block";
+         }
+      </script>
+   </body>
+</html>
