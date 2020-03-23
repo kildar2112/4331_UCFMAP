@@ -99,5 +99,5 @@ ___
 * [Design Documents](https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/architecture.md)
 * [Source Code](https://github.com/kildar2112/4331_UCFMAP/blob/master/src/Sprint_7)
 * [Tests - Manual & Automated](https://github.com/kildar2112/4331_UCFMAP/tree/master/tests)
-* [Product Demonstration](https://www.youtube.com/watch?v=zmvlHHwk69g)
+* [Product Demonstration](https://www.youtube.com/watch?v=VmBX9BHTDzY)
 	* [View the website live!](https://s3.amazonaws.com/www.ucfparkingmap.com/Index.html)
