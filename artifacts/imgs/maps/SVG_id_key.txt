@@ -4,6 +4,7 @@ ID Format		Description
 lbl_Garage_X		text labels over garages
 obj_Garage_X		garage fill area (to be filled with saturation color and clickable)
 
+obj_bld_XXXX		buildings, named via letter code
 
 
 
