@@ -18,7 +18,8 @@ Student/Visitor			009116ff
 Faculty							a50004ff
 Staff								0091d9ff
 Residents						a55804ff
-
+Default bld fill		d9cfc7ff
+bld selected fill 	6eade6ff
 
 
 
