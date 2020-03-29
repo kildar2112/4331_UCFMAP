@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "dark2", // "light1", "light2", "dark1", "dark2"
+	title:{
+		text: "Popular Hours"
+	},
+	axisY: {
+		title: "Percent Full",
+		maximum: 100,
+	},
+	data: [{
+		type: "column",
+		// y values to be replaced with get%full functions
+		dataPoints: [
+			{ y: 0, label: "<-6am" },
+			{ y: 5, label: "7" },
+			{ y: 13,  label: "8" },
+			{ y: 25,  label: "9" },
+			{ y: 30,  label: "10" },
+			{ y: 45,  label: "11" },
+			{ y: 75, label: "12" },
+			{ y: 100,  label: "1pm" },
+			{ y: 99,  label: "2" },
+			{ y: 85,  label: "3" },
+			{ y: 70,  label: "4" },
+			{ y: 60,  label: "5" },
+			{ y: 50,  label: "6" },
+			{ y: 20,  label: "7" },
+			{ y: 5,  label: "8" },
+			{ y: 0,  label: "8pm->" }
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 150px; width: 25%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
