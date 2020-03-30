@@ -121,10 +121,15 @@ def pushLogs(garages):
     obj = s3Resource.Object(bucket, filename)
     dataCurrent = getJSON(garages)
 
-    body = obj.get()['Body'].read()
-    body = str(body.decode("UTF-8")) + "\n" + json.dumps(dataCurrent)
+    bodyString = str(obj.get()['Body'].read().decode('UTF-8'))
 
-    uploadByteStream = bytes(body.encode('UTF-8'))
+    if len(bodyString) == 0:
+        bodyString = "[\n" + json.dumps(dataCurrent) + "\n]"
+    else:
+        bodyString = bodyString[:-2]
+        bodyString = bodyString + ",\n" + json.dumps(dataCurrent) + "\n]"
+
+    uploadByteStream = bytes(bodyString.encode('UTF-8'))
 
     s3.put_object(Bucket=bucket, Key=filename, Body=uploadByteStream, ACL='bucket-owner-full-control')
 
