@@ -39,9 +39,9 @@
          .modal-content {
          background-color: #fefefe;
          margin: auto;
-         padding: 20px;
+         padding: 5px;
          border: 1px solid #888;
-         width: 80%;
+         max-width: 480px;
          }
          /* The Close Button */
          .close {
@@ -58,12 +58,12 @@
          }
       </style>
    </head>
-   <body style="background-color:lightblue;">
+   <body onload="IframePull()" style="background-color:lightblue;">
       <div id="SplashScreen">
          <h1> Click image to agree and continue...</h1>
          <img src="https://github.com/kildar2112/4331_UCFMAP/blob/master/artifacts/imgs/misc/0001712_0.png?raw=true" class="center" onclick="ClearScreen()" />
       </div>
-      <div style="display:none;" id="All">
+      <div style="display:none; max-width: 1100px;" id="All">
          <div>
             <h1> Updated Parking Map (Interactive SVG) Coming Soon!</h1>
             <a href = "mailto:where2park.devs@gmail.com?subject=Feedback">
@@ -73,54 +73,84 @@
          <div style="position: absolute; top: 20px; left: 20px;">
             <img src="https://cdn.discordapp.com/attachments/310252186577928193/691485889750237264/Transparent.png" style="display:hidden;" alt="UCF Map" usemap="#parkMap">
             <map name="parkMap">
-               <area class="garageA" id="ClickA" onClick="showModal(this.id)" shape="rect" coords="50,400,100,350" href="#">
-               <area class="garageB" id="ClickB" onClick="showModal(this.id)" shape="rect" coords="260,450,310,480" href="#">
-               <area class="garageC" id="ClickC" onClick="showModal(this.id)" shape="rect" coords="415,230,460,280" href="#">
-               <area class="garageD" id="ClickD" onClick="showModal(this.id)" shape="rect" coords="365,155,415,200" href="#">
-               <area class="garageH" id="ClickH" onClick="showModal(this.id)" shape="rect" coords="230,150,270,185" href="#">
-               <area class="garageI" id="ClickI" onClick="showModal(this.id)" shape="rect" coords="80,300,135,340" href="#">
+               <area class="garageA" id="ClickA" onClick="showModal(this.id)" shape="rect" coords="45,368,100,425" href="#">
+               <area class="garageB" id="ClickB" onClick="showModal(this.id)" shape="rect" coords="233,500,280,535" href="#">
+               <area class="garageC" id="ClickC" onClick="showModal(this.id)" shape="rect" coords="398,270,432,323" href="#">
+               <area class="garageD" id="ClickD" onClick="showModal(this.id)" shape="rect" coords="345,165,398,220" href="#">
+               <area class="garageH" id="ClickH" onClick="showModal(this.id)" shape="rect" coords="205,168,255,215" href="#">
+               <area class="garageI" id="ClickI" onClick="showModal(this.id)" shape="rect" coords="78,325,128,365" href="#">
             </map>
          </div>
          <div id="myModalA" class="modal">
             <div class="modal-content">
                <span class="close">&times;</span>
-               <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.995244275565!2d-81.20785518507739!3d28.599919482430643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7685fa8c560f1%3A0x6a8e03adff282868!2sParking%20Garage%20A%2C%20Orlando%2C%20FL%2032816!5e0!3m2!1sen!2sus!4v1583106156986!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-               Permits Allowed: D, B, C <span style="margin-left: 100px;">1608/1623</span> <span style="margin-left: 100px;">1% Full</span></p>
+               <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.995244275565!2d-81.20785518507739!3d28.599919482430643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7685fa8c560f1%3A0x6a8e03adff282868!2sParking%20Garage%20A%2C%20Orlando%2C%20FL%2032816!5e0!3m2!1sen!2sus!4v1583106156986!5m2!1sen!2sus" max-width: 400px; height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+              <p>Permits Allowed: D, B, C</p>
+               <p style="overflow: hidden; max-width: 450px;">
+<iframe scrolling="no" src="https://parking.ucf.edu/garage-availability/" style="border: 0px none; margin-left: -220px; height: 385px; margin-top: -370px; width: 600px;">
+</iframe><span>Full</span>
+</p>
+</p>
             </div>
          </div>
          <div id="myModalB" class="modal">
             <div class="modal-content">
                <span class="close">&times;</span>
                <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.0865583391983!2d-81.2020000850775!3d28.597179982431783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7685d813e044b%3A0x40d643f1525b673d!2sUCF%20Parking%20Services!5e0!3m2!1sen!2sus!4v1583107698650!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-               Permits Allowed: D, B, C <span style="margin-left: 100px;">1189/1259</span> <span style="margin-left: 100px;">6% Full</span></p>
+              <p>Permits Allowed: D, B, C</p>
+              <p style="overflow: hidden; max-width: 450px;">
+<iframe scrolling="no" src="https://parking.ucf.edu/garage-availability/" style="border: 0px none; margin-left: -220px; height: 410px; margin-top: -390px; width: 600px;">
+</iframe><span>Full</span>
+</p>
+</p>
             </div>
          </div>
          <div id="myModalC" class="modal">
             <div class="modal-content">
                <span class="close">&times;</span>
                <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.9169634656855!2d-81.1981073850774!3d28.602267782429667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7684359016d01%3A0x334498c30265141b!2sParking%20Garage%20C%2C%20Orlando%2C%20FL%2032816!5e0!3m2!1sen!2sus!4v1583109974106!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-               Permits Allowed: D, B, C <span style="margin-left: 100px;">1853/1852</span> <span style="margin-left: 100px;">0% Full</span></p>
+               <p>Permits Allowed: D, B, C</p>
+               <p style="overflow: hidden; max-width: 450px;">
+<iframe scrolling="no" src="https://parking.ucf.edu/garage-availability/" style="border: 0px none; margin-left: -220px; height: 435px; margin-top: -418px; width: 600px;">
+</iframe><span>Full</span>
+</p>
+</p>
             </div>
          </div>
          <div id="myModalD" class="modal">
             <div class="modal-content">
                <span class="close">&times;</span>
                <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.8282616607685!2d-81.19937258507733!3d28.60492848242877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7685b2e8587cf%3A0x25ebc6bfbc64bdb0!2sParking%20Garage%20D%2C%20Orlando%2C%20FL%2032816!5e0!3m2!1sen!2sus!4v1583110009638!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-               Permits Allowed: D, B, C <span style="margin-left: 100px;">1241/1241</span> <span style="margin-left: 100px;">0% Full</span></p>
+               <p>Permits Allowed: D, B, C</p>
+               <p style="overflow: hidden; max-width: 450px;">
+<iframe scrolling="no" src="https://parking.ucf.edu/garage-availability/" style="border: 0px none; margin-left: -220px; height: 458px; margin-top: -447px; width: 600px;">
+</iframe><span>Full</span>
+</p>
+</p>
             </div>
          </div>
          <div id="myModalH" class="modal">
             <div class="modal-content">
                <span class="close">&times;</span>
                <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.825767886403!2d-81.20342628507737!3d28.605003282428637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7685bb392fa4b%3A0x7ce662dbb1f5b668!2sUCF%20Parking%20Garage%20H%20(PGH)!5e0!3m2!1sen!2sus!4v1583110059433!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-               Permits Allowed: D, B, C <span style="margin-left: 100px;">1287/1284</span> <span style="margin-left: 100px;">0% Full</span></p>
+               <p>Permits Allowed: D, B, C</p>
+               <p style="overflow: hidden; max-width: 450px;">
+<iframe scrolling="no" src="https://parking.ucf.edu/garage-availability/" style="border: 0px none; margin-left: -220px; height: 482px; margin-top: -465px; width: 600px;">
+</iframe><span>Full</span>
+</p>
+</p>
             </div>
          </div>
          <div id="myModalI" class="modal">
             <div class="modal-content">
                <span class="close">&times;</span>
                <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.9551128865373!2d-81.20690608507735!3d28.601123382430163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7685ee39688f5%3A0x9a9ad07c9fed053b!2sParking%20Garage%20I%2C%20Orlando%2C%20FL%2032816!5e0!3m2!1sen!2sus!4v1583110085089!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-               Permits Allowed: D, B, C <span style="margin-left: 100px;">1232/1231</span> <span style="margin-left: 100px;">0% Full</span></p>
+               <p>Permits Allowed: D, B, C</p>
+               <p style="overflow: hidden; max-width: 450px;">
+<iframe scrolling="no" src="https://parking.ucf.edu/garage-availability/" style="border: 0px none; margin-left: -220px; height: 505px; margin-top: -493px; width: 600px;">
+</iframe><span>Full</span>
+</p>
+</p>
             </div>
          </div>
          <div style="float: left;">
