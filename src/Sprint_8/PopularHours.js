@@ -3,7 +3,7 @@ const fs = require('fs')
 const filePath = './logs.json'
 
 
-function jsonReader(filePath, cd)
+function jsonReader(filePath, cd);
 {
 	fs.readFile(filePath, 'utf8', (err, jsonString) =>
 	{
