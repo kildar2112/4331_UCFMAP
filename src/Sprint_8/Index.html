@@ -20542,7 +20542,7 @@
             <option value="RL">Resident RL Permit</option>
             <option value="KP">Resident KP Permit</option>
          </select>
-         <select id="Building Select" style="position:relative; left: 70px;">
+         <select id="Building Select" onchange="recommend();" style="position:relative; left: 70px;">
             <option value="Select">Select Classroom Building</option>
 						<option value="ALUM">[ALUM] FAIRWINDS Alumni Center</option>
 						<option value="BA1">[BA1] Business Administration 1</option>
@@ -20613,9 +20613,12 @@
             <br>
             <br>
             <button style="margin-left: 175px;" onclick="window.location.href = 'http://google.com';">Go To Google Maps</button>
+         <br>
+            <p id="recommendation">
+            </p>
       </div>
 
-      <script src="update.js">
+      <script src="colors.js">
       </script>
       <script>
          function ClearScreen() {
@@ -20664,7 +20667,7 @@
                  span = document.getElementsByClassName("close")[5];
                  modal.style.display = "block";
          		}
-         
+
          	span.onclick = function()
              {
            modal.style.display = "none";
@@ -20677,6 +20680,228 @@
          	 }
          	}
          }
+      </script>
+      <script>
+        document.getElementById("recommendation").innerHTML = "";
+        function recommend() {
+          var str = "";
+          if (document.getElementById("Building Select").value == "ALUM") {
+          	str = "The closest garages to the Alumni Center are 1.)D 2.)H 3.)C 4.)I 5.)A 6.)B 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "BA1") {
+          	str = "The closest garages to Business Administration 1 are 1.)C 2.)D 3.)H 4.)I 5.)A 6.)B 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "BA2") {
+          	str = "The closest garages to Business Administration 2 are 1.)C 2.)D 3.)H 4.)I 5.)A 6.)B 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "BHC") {
+          	str = "The closest garages to Burnett Honors College are 1.)I 2.)H 3.)A 4.)D 5.)C 6.)B 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "BIO") {
+          	str = "The closest garages to Biological Sciences are 1.)C 2.)B 3.)Libra 4.)D 5.)A 6.)I 7.)H";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "BRE") {
+          	str = "The closest garages to Brevard Hall are 1.)B 2.)Libra 3.)C 4.)A 5.)I 6.)D 7.)H";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "CAH") {
+          	str = "The closest garages to College of Arts & Humanities are 1.)H 2.)D 3.)I 4.)A 5.)C 6.)B 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "CAPS") {
+          	str = "The closest garages to Counseling and Psychological Services are 1.)B 2.)Libra 3.)C 4.)A 5.)I 6.)D 7.)H";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "CB1") {
+          	str = "The closest garages to Classroom Building 1 are 1.)H 2.)D 3.)C 4.)I 5.)A 6.)B 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "CB2") {
+          	str = "The closest garages to Classroom Building 2 are 1.)H 2.)D 3.)C 4.)I 5.)A 6.)B 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "CB1") {
+          	str = "The closest garages to Classroom Building 1 are 1.)H 2.)D 3.)C 4.)I 5.)A 6.)B 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "CHEM") {
+          	str = "The closest garages to the Chemistry Building are 1.)C 2.)B 3.)Libra 4.)I 5.)A 6.)D 7.)H";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "CIT") {
+          	str = "The closest garages to Citrus Hall are 1.)B 2.)Libra 3.)A 4.)I 5.)C 6.)D 7.)H";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "CROL") {
+          	str = "The closest garages to the College of Optics & Photonics are 1.)C 2.)D 3.)H 4.)B 5.)Libra 6.)I 7.)A";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "CSB") {
+          	str = "The closest garages to the College of Sciences are 1.)C 2.)I 3.)D 4.)H 5.)A 6.)B 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "CSEL") {
+          	str = "The closest garages to Career Services are 1.)H 2.)D 3.)C 4.)I 5.)A 6.)B 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "ED") {
+          	str = "The closest garages to the Education Complex & Gym are 1.)I 2.)A 3.)B 4.)Libra 5.)H 6.)D 7.)C";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "ENG1") {
+          	str = "The closest garages to Engineering 1 are 1.)C 2.)D 3.)H 4.)B 5.)I 6.)A 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "ENG2") {
+          	str = "The closest garages to Engineering 2 are 1.)C 2.)D 3.)H 4.)B 5.)I 6.)A 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "FC") {
+          	str = "The closest garages to Ferrell Commons 1.)B 2.)Libra 3.)A 4.)I 5.)C 6.)D 7.)H";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "FLA") {
+          	str = "The closest garages to Flagler Hall are 1.)B 2.)Libra 3.)C 4.)A 5.)I 6.)D 7.)H";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "GB") {
+          	str = "The closest garages to the UCF Global Building are 1.)D 2.)C 3.)H 4.)I 5.)A 6.)B 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "HAB") {
+          	str = "The closest garages to the Housing Administration Building are 1.)B 2.)Libra 3.)A 4.)I 5.)C 6.)D 7.)H";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "HC") {
+          	str = "The closest garages to the Health Center and Pharmacy are 1.)B 2.)Libra 3.)A 4.)I 5.)C 6.)D 7.)H";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "HEC") {
+          	str = "The closest garages to the Harrison Corporation Engineering Center are 1.)C 2.)D 3.)B 4.)Libra 5.)H 6.)I 7.)A";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "HPA1") {
+          	str = "The closest garages to Health & Public Affairs 1 are 1.)C 2.)D 3.)H 4.)I 5.)A 6.)B 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "HPA2") {
+          	str = "The closest garages to Health & Public Affairs 2 are 1.)C 2.)D 3.)H 4.)I 5.)A 6.)B 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "HPH") {
+          	str = "The closest garages to Howard Phillips Hall are 1.)I 2.)A 3.)B 4.)H 5.)Libra 6.)C 7.)D";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "JTWC") {
+          	str = "The closest garages to John T. Washington Center are 1.)I 2.)A 3.)H 4.)B 5.)C 6.)D 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "LAK") {
+          	str = "The closest garages to Lake Hall are 1.)B 2.)I 3.)A 4.)Libra 5.)C 6.)H 7.)D";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "LIB") {
+          	str = "The closest garages to John C. Hitt Library are 1.)I 2.)A 3.)B 4.)Libra 5.)C 6.)H 7.)D";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "MH") {
+          	str = "The closest garages to Millican Hall are 1.)I 2.)A 3.)B 4.)Libra 5.)C 6.)H 7.)D";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "MIRC") {
+          	str = "The closest garages to Morgridge International Reading Center are 1.)A 2.)I 3.)B 4.)Libra 5.)H 6.)C 7.)D";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "MSB") {
+          	str = "The closest garages to the Mathematical Sciences Building are 1.)B 2.)I 3.)A 4.)Libra 5.)C 6.)H 7.)D";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "NSC") {
+          	str = "The closest garages to Nicholson School of Communication are 1.)H 2.)I 3.)A 4.)D 5.)C 6.)B 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "ORG") {
+          	str = "The closest garages to Orange Hall are 1.)B 2.)Libra 3.)C 4.)I 5.)A 6.)D 7.)H";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "OSC") {
+          	str = "The closest garages to Osceola Hall are 1.)B 2.)Libra 3.)I 4.)A 5.)C 6.)H 7.)D";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "PAC") {
+          	str = "The closest garages to the Performing Arts Center are 1.)I 2.)A 3.)H 4.)B 5.)D 6.)C 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "POL") {
+          	str = "The closest garages to Polk Hall are 1.)B 2.)Libra 3.)A 4.)I 5.)C 6.)H 7.)D";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "PSB") {
+          	str = "The closest garages to the Physical Sciences Building are 1.)C 2.)D 3.)Libra 4.)B 5.)H 6.)I 7.)A";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "PSY") {
+          	str = "The closest garages to the Psychology Building are 1.)H 2.)D 3.)C 4.)I 5.)A 6.)B 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "R1") {
+          	str = "The closest garages to Research 1 are 1.)C 2.)D 3.)H 4.)B 5.)Libra 6.)I 7.)A";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "RH") {
+          	str = "The closest garages to Research Hall are 1.)I 2.)H 3.)A 4.)B 5.)C 6.)D 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "SEM") {
+          	str = "The closest garages to Seminole Hall are 1.)Libra 2.)B 3.)C 4.)A 5.)I 6.)D 7.)H";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "STUN") {
+          	str = "The closest garages to the Student Union are 1.)H 2.)I 3.)A 4.)D 5.)C 6.)B 7)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "SUM") {
+          	str = "The closest garages to Sumter Hall are 1.)B 2.)Libra 3.)C 4.)A 5.)I 6.)D 7.)H";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "TA") {
+          	str = "The closest garages to the Teaching Academy are 1.)I 2.)A 3.)B 4.)H 5.)C 6.)Libra 7.)D";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "TC1") {
+          	str = "The closest garages to Tech Commons 1 are 1.)I 2.)A 3.)B 4.)C 5.)H 6.)Libra 7.)D";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "TC2") {
+          	str = "The closest garages to Tech Commons 2 are 1.)I 2.)A 3.)B 4.)C 5.)H 6.)Libra 7.)D";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "TCH") {
+          	str = "The closest garages to Trevor Colbourn Hall are 1.)I 2.)A 3.)H 4.)B 5.)C 6.)D 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "TH") {
+          	str = "The closest garages to the Theatre Building are 1.)C 2.)B 3.)I 4.)A 5.)H 6.)Libra 7.)D";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "UWC") {
+          	str = "The closest garages to the Duke Energy UCF Welcome Center are 1.)B 2.)A 3.)I 4.)H 5.)Libra 6.)C 7.)D";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "VAB") {
+          	str = "The closest garages to the Visual Arts Building are 1.)I 2.)A 3.)H 4.)D 5.)C 6.)B 7.)Libra";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+          if (document.getElementById("Building Select").value == "VOL") {
+          	str = "The closest garages to Volusia Hall are 1.)B 2.)A 3.)I 4.)Libra 5.)C 6.)H 7.)D";
+          	document.getElementById("recommendation").innerHTML = str;
+          }
+        }
       </script>
    </body>
 </html>
