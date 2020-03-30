@@ -9,10 +9,18 @@ class Garage:
         self.name = name
         self.empty_spots = empty_spots
         self.max_capacity = max_capacity
-        self.percent_full = 100 - round(empty_spots / max_capacity * 100)
+        self.percent_full = round((max_capacity - empty_spots) / max_capacity * 100)
+        self.color = "black"
 
         if self.percent_full < 0:
             self.percent_full = 0
+
+        if self.percent_full <= 33:
+            self.color = "green"
+        elif self.percent_full <= 66:
+            self.color = "yellow"
+        elif self.percent_full <= 99:
+            self.color = "red"
 
     def __str__(self):
         return self.name + "\t" + str(self.empty_spots) + "/" + str(self.max_capacity) + "\t" + str(self.percent_full) + "%\n"
@@ -57,6 +65,9 @@ def scrapeGarages():
     page_html = getPageHTML()
     garage_list = getHTMLForAllGarages(page_html)
     garages = generateGarages(garage_list)
+    return garages
+
+def getJSON(garages):
     return {
         'date' : str(datetime.datetime.now()),
         'A' : str(garages[0].percent_full),
@@ -67,14 +78,63 @@ def scrapeGarages():
         'I' : str(garages[5].percent_full),
         'L' : str(garages[6].percent_full),
     }
-def scrape(event, context):
+
+
+def getColors(garages):
+    retval = ""
+
+    garageNames = ["A", "B", "C", "D", "H", "I", "L"]
+
+    for i in range(0, 7):
+        objectId = "\"obj_Garage_" + garageNames[i] + "\""
+        line = "document.getElementById(" + objectId + ").style.fill = \"" + garages[i].color + "\";\n"
+        retval = retval + line
+
+    return retval
+
+def pushCurrent(garages):
     s3 = boto3.client('s3')
+
     bucket = 'www.ucfparkingmap.com'
-    data = scrapeGarages()
+    dataCurrent = getJSON(garages)
     filename = 'current.json'
-    uploadByteStream = bytes(json.dumps(data).encode('UTF-8'))
+    uploadByteStream = bytes(json.dumps(dataCurrent).encode('UTF-8'))
 
     s3.put_object(Bucket=bucket, Key=filename, Body=uploadByteStream, ACL='bucket-owner-full-control')
 
-    print('complete')
-    return data
+def pushColors(garages):
+    s3 = boto3.client('s3')
+
+    bucket = 'www.ucfparkingmap.com'
+    dataColors = getColors(garages)
+    filename = "colors.js"
+    uploadByteStream = bytes(dataColors.encode('UTF-8'))
+
+    s3.put_object(Bucket=bucket, Key=filename, Body=uploadByteStream, ACL='bucket-owner-full-control')
+
+def pushLogs(garages):
+    s3Resource = boto3.resource('s3')
+    s3 = boto3.client('s3')
+
+    bucket = "www.ucfparkingmap.com"
+    filename = "logs.json"
+    obj = s3Resource.Object(bucket, filename)
+    dataCurrent = getJSON(garages)
+
+    body = obj.get()['Body'].read()
+    body = str(body.decode("UTF-8")) + "\n" + json.dumps(dataCurrent)
+
+    uploadByteStream = bytes(body.encode('UTF-8'))
+
+    s3.put_object(Bucket=bucket, Key=filename, Body=uploadByteStream, ACL='bucket-owner-full-control')
+
+
+
+def scrape(event, context):
+    garages = scrapeGarages();
+
+    pushCurrent(garages)
+    pushColors(garages)
+    pushLogs(garages)
+
+    return "done"
