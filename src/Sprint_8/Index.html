@@ -70,15 +70,15 @@
             Click here to send feedback!
             </a>
          </div>
-         <div style="position: absolute; top: 20px; left: 20px;">
-            <img src="https://cdn.discordapp.com/attachments/310252186577928193/691485889750237264/Transparent.png" style="display:hidden;" alt="UCF Map" usemap="#parkMap">
+         <div style="position: absolute; top: 150px; left: 20px;">
+            <img src="https://cdn.discordapp.com/attachments/310252186577928193/691485889750237264/Transparent.png" style="display:hidden; max-width: 535px; max-height: 535px;" alt="UCF Map" usemap="#parkMap">
             <map name="parkMap">
-               <area class="garageA" id="ClickA" onClick="showModal(this.id)" shape="rect" coords="45,368,100,425" href="#">
-               <area class="garageB" id="ClickB" onClick="showModal(this.id)" shape="rect" coords="233,500,280,535" href="#">
-               <area class="garageC" id="ClickC" onClick="showModal(this.id)" shape="rect" coords="398,270,432,323" href="#">
-               <area class="garageD" id="ClickD" onClick="showModal(this.id)" shape="rect" coords="345,165,398,220" href="#">
-               <area class="garageH" id="ClickH" onClick="showModal(this.id)" shape="rect" coords="205,168,255,215" href="#">
-               <area class="garageI" id="ClickI" onClick="showModal(this.id)" shape="rect" coords="78,325,128,365" href="#">
+               <area class="garageA" id="ClickA" onClick="showModal(this.id)" shape="rect" coords="45,238,100,295" href="#">
+               <area class="garageB" id="ClickB" onClick="showModal(this.id)" shape="rect" coords="233,370,280,405" href="#">
+               <area class="garageC" id="ClickC" onClick="showModal(this.id)" shape="rect" coords="398,140,432,193" href="#">
+               <area class="garageD" id="ClickD" onClick="showModal(this.id)" shape="rect" coords="345,35,398,80" href="#">
+               <area class="garageH" id="ClickH" onClick="showModal(this.id)" shape="rect" coords="205,38,255,85" href="#">
+               <area class="garageI" id="ClickI" onClick="showModal(this.id)" shape="rect" coords="78,195,128,235" href="#">
             </map>
          </div>
          <div id="myModalA" class="modal">
@@ -20605,7 +20605,7 @@
 						<option value="LAK">[LAK] Lake Hall</option>
 						<option value="LIB">[LIB] Library, John C. Hitt</option>
 						<option value="MH">[MH] Millican Hall</option>
-						<option value="MIRC">[MIRC] Morgridge Int'l Reading Ctr.</option>
+						<option value="MIRC">[MIRC] Morgridge Intl Reading Ctr.</option>
 						<option value="MSB">[MSB] Mathematical Sciences Building</option>
 						<option value="NSC">[NSC] Nicholson Sch. Of Communication</option>
 						<option value="ORG">[ORG] Orange Hall</option>
@@ -20642,7 +20642,7 @@
             <label for="ShowRoute"> Show Route</label>
             <br>
             <br>
-            <button style="margin-left: 175px;" onclick="window.location.href = 'http://google.com';">Go To Google Maps</button>
+            <button style="margin-left: 175px;" onclick="GoToMaps()">Go To Google Maps</button>
          <br>
             <p id="recommendation">
             </p>
@@ -20933,5 +20933,10 @@
           }
         }
       </script>
+      <script>
+function GoToMaps() {
+  window.open("https://www.google.com/maps");
+}
+</script>
    </body>
 </html>
