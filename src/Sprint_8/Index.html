@@ -20627,12 +20627,6 @@
 						<option value="UWC">[UWC] Duke Energy Welcome Center</option>
 						<option value="VAB">[VAB] Visual Arts Building</option>
 						<option value="VOL">[VOL] Volusia Hall</option>
-
-
-
-
-
-
          </select>
          <br>
          <br>
@@ -20933,9 +20927,261 @@
           }
         }
       </script>
-      <script>
+<script>
 function GoToMaps() {
-  window.open("https://www.google.com/maps");
+  var end = document.getElementById("Building Select").value;
+  var start = document.getElementById("PermitSelect").value;
+  var url = "https://www.google.com/maps/dir/";
+  var nameOfStart = "";
+  var nameOfEnd = "";
+  var startData = "";
+  var endData = "";
+
+  switch (start) {
+    case "A":
+      nameOfStart = "Parking+Garage+A,+Orlando,+FL+32816";
+      startData = "1s0x88e7685fa8c560f1:0x6a8e03adff282868";
+      break;
+    case "B":
+      nameOfStart = "Garage+B,+Orlando,+FL";
+      startData = "1s0x88e768676262bb93:0x34fd56cd12c081f7!";
+      break;
+    case "C":
+      nameOfStart = "Parking+Garage+C,+Orlando,+FL";
+      startData = "1s0x88e7684359016d01:0x334498c30265141b";
+      break;
+    case "D":
+      nameOfStart = "Parking+Garage+D,+Orlando,+FL";
+      startData = "1s0x88e7685b2e8587cf:0x25ebc6bfbc64bdb0";
+      break;
+    case "H":
+      nameOfStart = "Parking+Garage+H,+Orlando,+FL";
+      startData = "1s0x88e7685bc878d87b:0xdbae0c3e23b79d7b";
+      break;
+    case "I":
+      nameOfStart = "Garage+I,+Gemini+Boulevard+West,+Orlando,+FL";
+      startData = "1s0x88e7685ee24a8957:0x7e4783b863f728f";
+      break;
+  }
+  url = url + nameOfStart + "/";
+
+  switch (end) {
+    case "ALUM":
+      nameOfEnd = "UCF+FAIRWINDS+Alumni+Center+(ALUM),+Gemini+Boulevard+North,+Orlando,+FL";
+      endData = "1s0x88e7685ae36eeec5:0xab4ff3d2f6f95c40";
+      break;
+    case "BA1":
+      nameOfEnd = "Business+Administration+I,+Florida";
+      endData = "1s0x88e7685cf3f20ba9:0x8a5bb4062ab02140";
+      break;
+    case "BA2":
+      nameOfEnd = "Business+Administration+II,+Orlando,+FL";
+      endData = "1s0x88e7685cf279f551:0x2b3e6d8f9035f8ea";
+      break;
+    case "BHC":
+      nameOfEnd = "The+Burnett+Honors+College,+Aquarius+Agora+Drive,+Orlando,+FL";
+      endData = "1s0x88e7685c0307a501:0x3d78bd97ad6e6c10";
+      break;
+    case "BIO":
+      nameOfEnd = "Biological+Sciences+Building,+Orlando,+FL";
+      endData = "1s0x88e7685ce381eb43:0x7f5e297c6074af1f";
+      break;
+    case "BRE":
+      nameOfEnd = "Brevard+Hall,+Orlando,+FL";
+      endData = "1s0x88e7685d0ec26723:0xa661db154d4f8df5";
+      break;
+    case "CAH":
+      nameOfEnd = "University+of+Central+Florida+-+College+of+Arts+%26+Humanities,+Aquarius+Agora+Drive,+Orlando,+FL";
+      endData = "1s0x88e7685960956427:0xc34db77103f0551d";
+      break;
+    case "CAPS":
+      nameOfEnd = "UCF+Counseling+and+Psychological+Services+(CAPS),+Central+Florida+Boulevard,+Orlando,+FL";
+      endData = "1s0x88e7685c30e1a7ad:0xc609da77e96663e4";
+      break;
+    case "CB1":
+      nameOfEnd = "Classroom+Building+1,+Aquarius+Agora+Drive,+Orlando,+FL";
+      endData = "1s0x88e7685b91a22a8b:0x54fb2f6239af137a";
+      break;
+    case "CB2":
+      nameOfEnd = "Classroom+Building+II,+Gemini+Boulevard+North,+Orlando,+FL";
+      endData = "1s0x88e7685b9803019d:0xf893c9fb0ccece8b";
+      break;
+    case "CHEM":
+      nameOfEnd = "Chemistry+Building,+Orlando,+FL";
+      endData = "1s0x88e7685c551fcb89:0x8fdc0994dde204ca";
+      break;
+    case "CIT":
+      nameOfEnd = "Citrus+Hall,+Libra+Drive,+Orlando,+FL";
+      endData = "1s0x88e769dbaae01a39:0x745b5e499d011424";
+      break;
+    case "CROL":
+      nameOfEnd = "CROL,+Scorpius+Street,+Orlando,+FL";
+      endData = "1s0x88e7685cb63f9681:0x72d0bc37bb9ca702";
+      break;
+    case "CSB":
+      nameOfEnd = "UCF+College+of+Sciences,+Pegasus+Drive,+Orlando,+FL";
+      endData = "1s0x88e7685c4349f801:0xfdc4aa2732e9c054";
+      break;
+    case "CSEL":
+      nameOfEnd = "UCF+Career+Services+and+Experiential+Learning+(CSEL),+Pictor+Lane,+Orlando,+FL";
+      endData = "1s0x88e7685b0391bbc5:0xc6ec64b5ecb4a332";
+      break;
+    case "ED":
+      nameOfEnd = "Education+Complex+and+Gym,+Orlando,+FL";
+      endData = "1s0x88e7685ef66e041f:0xb4a018312c2d868a";
+      break;
+    case "ENG1":
+      nameOfEnd = "UCF+Engineering+Building+I+(ENG1),+Pegasus+Drive,+Orlando,+FL";
+      endData = "1s0x88e7685c9244d7eb:0xc75b5c120fc98433";
+      break;
+    case "ENG2":
+      nameOfEnd = "ENG+2+Engineering+Building+2,+Pegasus+Drive,+Orlando,+FL";
+      endData = "1s0x88e7685c9a4388f3:0x1471963e46cb9344";
+      break;
+    case "FC":
+      nameOfEnd = "Ferrell+Commons,+Orlando,+FL";
+      endData = "1s0x88e7685d9dc02b6d:0xb7129a05c7954d43";
+      break;
+    case "FLA":
+      nameOfEnd = "Flagler+Hall,+Orlando,+FL";
+      endData = "1s0x88e7685d38a6fb67:0xbb74814aaff1c94d";
+      break;
+    case "GB":
+      nameOfEnd = "UCF+Global+(GB),+Scorpius+Street,+Orlando,+FL";
+      endData = "1s0x88e7685b22921e21:0xb8f17138c333868e";
+      break;
+    case "HAB":
+      nameOfEnd = "Housing+Administration+Building,+Orlando,+FL";
+      endData = "1s0x88e7685d6612b739:0xdce8e6f75a2a2d5d";
+      break;
+    case "HC":
+      nameOfEnd = "Health+Center,+Libra+Drive,+Orlando,+FL";
+      endData = "1s0x88e7685d06d4da4d:0x542737436d343f0a";
+      break;
+    case "HEC":
+      nameOfEnd = "Harris+Corporation+Engineering+Center,+Orlando,+FL";
+      endData = "1s0x88e7685cc4a4541b:0x6384a5663b5dc837";
+      break;
+    case "HPA1":
+      nameOfEnd = "UCF+College+of+Health+Professions+and+Sciences,+Pegasus+Drive,+Orlando,+FL";
+      endData = "1s0x88e7685c5c8a72b9:0xc0170de291feebfc";
+      break;
+    case "HPA2":
+      nameOfEnd = "Health+and+Public+Affairs+II,+Orlando,+FL";
+      endData = "1s0x88e7685b6764b81b:0x4ab7681083d2b232";
+      break;
+    case "HPH":
+      nameOfEnd = "Howard+Phillips+Hall,+Orlando,+FL";
+      endData = "1s0x88e7685e86eb7657:0xa089dce660f4836d";
+      break;
+    case "JTWC":
+      nameOfEnd = "John+T.+Washington+Center,+Pegasus+Circle,+Orlando,+FL";
+      endData = "1s0x88e7685c236a2d5b:0x63d2cfc2cb9410ae";
+      break;
+    case "LAK":
+      nameOfEnd = "Lake+Hall,+Pyxis+Lane,+Orlando,+FL";
+      endData = "1s0x88e7685dc0e795c7:0x5a1a96f7d1e33203";
+      break;
+    case "LIB":
+      nameOfEnd = "John+C.+Hitt+Library,+Pegasus+Drive,+Orlando,+FL";
+      endData = "1s0x88e7685c31a75adb:0xb86997370695871b";
+      break;
+    case "MH":
+      nameOfEnd = "Millican+Hall,+Orlando,+FL";
+      endData = "1s0x88e7685dd87891f7:0x5af969d1f00d4a2f";
+      break;
+    case "MIRC":
+      nameOfEnd = "UCF+Morgridge+International+Reading+Center+(MIRC),+Orlando,+FL";
+      endData = "1s0x88e7685e368aacd3:0xdf9927bdee71e4c3";
+      break;
+    case "MSB":
+      nameOfEnd = "UCF+Mathematical+Sciences+Building+(MSB),+Andromeda+Loop+North,+Orlando,+FL";
+      endData = "1s0x88e7685db15d9505:0x92faff49fc7ce7ef";
+      break;
+    case "NSC":
+      nameOfEnd = "UCF+Nicholson+School+of+Communication+and+Media+(NSC),+Aquarius+Agora+Drive,+Orlando,+FL";
+      endData = "1s0x88e768595c9ce73f:0xc8c9d21d65423247";
+      break;
+    case "ORG":
+      nameOfEnd = "Orange+Hall,+Libra+Drive,+Orlando,+FL";
+      endData = "1s0x88e7685d12a3c9d9:0x91040a75211918b9";
+      break;
+    case "OSC":
+      nameOfEnd = "Osceola+Hall,+Pyxis+Lane,+Orlando,+FL";
+      endData = "1s0x88e7685d8d72781b:0xca06726f638fb1ef";
+      break;
+    case "PAC":
+      nameOfEnd = "Performing+Arts+Center,+Orlando,+FL";
+      endData = "1s0x88e7685edaaefaa1:0x390fe7390ea04b36";
+      break;
+    case "POL":
+      nameOfEnd = "Polk+Hall,+Orlando,+FL";
+      endData = "1s0x88e7685df1069df1:0x6d1ad47ad116aa43";
+      break;
+    case "PSB":
+      nameOfEnd = "Physical+Sciences+Building,+Orlando,+FL";
+      endData = "1s0x88e7685cdbf90435:0x4919b39016a397b";
+      break;
+    case "PSY":
+      nameOfEnd = "Psychology+Building,+Orlando,+FL";
+      endData = "1s0x88e7685ba7e92cf9:0x8a047e76ddbd3fcd";
+      break;
+    case "R1":
+      nameOfEnd = "Research+I,+Orlando,+FL";
+      endData = "1s0x88e76940d3e5f73f:0x3b17d9c8fd0ddf4c";
+      break;
+    case "RH":
+      nameOfEnd = "Rehearsal+Hall,+Mercury+Circle,+Orlando,+FL";
+      endData = "1s0x88e7690c99188b05:0x31806d49a29b361c";
+      break;
+    case "SEM":
+      nameOfEnd = "Seminole+Hall,+Libra+Drive,+Orlando,+FL";
+      endData = "1s0x88e76996c74947d9:0x48f3ca58ac4977bc";
+      break;
+    case "STUN":
+      nameOfEnd = "Student+Union,+Pegasus+Drive,+Orlando,+FL";
+      endData = "1s0x88e7685c69505879:0xb3ff663aee77d71";
+      break;
+    case "SUM":
+      nameOfEnd = "Sumter+Hall,+University+of+Central+Florida,+Orlando,+FL";
+      endData = "1s0x88e769a4999b8999:0x727cc17040959947";
+      break;
+    case "TA":
+      nameOfEnd = "UCF+Teaching+Academy,+Andromeda+Loop+North,+Orlando,+FL";
+      endData = "1s0x88e7685e4492ceab:0x80b540c9e7675ec2";
+      break;
+    case "TC1":
+      nameOfEnd = "UCF+Technology+Commons+I+(TC1),+Pegasus+Drive,+Orlando,+FL";
+      endData = "1s0x88e7685c4e5d942b:0xbba698c259bce2a1";
+      break;
+    case "TC2":
+      nameOfEnd = "UCF+Technology+Commons+II+(TC2),+Orlando,+FL";
+      endData = "1s0x88e7685c45389573:0x90dfa0dd02b650a9";
+      break;
+    case "TH":
+      nameOfEnd = "Theatre+UCF,+Pegasus+Drive,+Orlando,+FL";
+      endData = "1s0x88e7685edb0a44dd:0x4c7fc9501198d2a";
+      break;
+    case "UWC":
+      nameOfEnd = "Duke+Energy+UCF+Welcome+Center,+Gemini+Boulevard+South,+Orlando,+FL";
+      endData = "1s0x88e7685e0fdcf077:0xa734941d036e510d";
+      break;
+    case "VAB":
+      nameOfEnd = "Visual+Arts+Building,+Orlando,+FL";
+      endData = "1s0x88e7685eab51dc0d:0xd00e972354c27098";
+      break;
+    case "VOL":
+      nameOfEnd = "Volusia+Hall,+Pyxis+Lane,+Orlando,+FL";
+      endData = "1s0x88e7685dbe378437:0x5a7ac33c67f53364";
+      break;
+
+  }
+
+  url = url + nameOfEnd + "/@28.5968883,-81.2025409,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!";
+  url = url + startData + "!2m2!1d-81.2023195!2d28.5991055!1m5!1m1!";
+  url = url + endData + "!2m2!1d-81.2056665!2d28.5999195!3e2";
+
+  window.open(url);
 }
 </script>
    </body>
